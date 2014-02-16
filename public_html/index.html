@@ -9,86 +9,118 @@ and open the template in the editor.
         <title>Art</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="css/html5reset.css" type="text/css">
+         <link rel="stylesheet" href="css/fluid_grid.css" type="text/css">
+         <link rel="stylesheet" href="css/flexslider.css" type="text/css">
         <link rel="stylesheet" href="css/first_style.css" type="text/css">
-        <link rel="stylesheet" href="css/fluid_grid.css" type="text/css">
-        <link rel="stylesheet" href="css/flexslider.css" type="text/css">
-        <meta name="viewport" content="width=device-width">
+        
+        <meta name="viewport" content="width=device-width" />
         
     </head>
     <body>
       <div class="wrapper">
-        <header>
-            <div class="container_12">
-                <img alt="Artigianato" src="img/logo.jpg" class="centered">   
-               <div class="clear">&nbsp;</div> 
-            <nav>
-                <ul>
-			<li><a href="#">Home</a></li>
-			<li><a href="#">Chi Siamo</a></li>
-			<li><a href="#">Contatti</a></li>
-		</ul></nav>
-             </div>
-        </header>
-        <div class=”clear”></div>
-          <div class="main-content">
+        <div id="head-content">
+          <div class="container_12">
+           <div class="grid_12">
+         <header>
+
+           <div class="grid_2 prefix_5">
+               <div class="logo">
+                     <img src="img/logo.jpg">
+               </div>
+           </div>
+                     <div class="grid_5">
+                         <div class="social">
+                                             <a href="#">
+                                                 <img class="social_icon" src="img/social/Facebook.png">
+                                             </a>
+                                             <a href="#">
+                                                     <img class="social_icon" src="img/social/Twitter2.png">
+                                             </a>
+
+                                             <a href="#">
+                                                     <img class="social_icon" src="img/social/Pinterest.png">
+                                             </a>
+                            </div> 
+                     </div>
+
+
+                 <div id="navbar">
+                     <nav>
+                         <ul>
+                             <li class="active"><a href="index.html">Home</a></li>
+                             <li><a href="chi_siamo.html">Chi Siamo</a></li>
+                             <li><a href="contatti.html">Contatti</a></li>
+                             <li><a href="prodotti.html">Prodotti</a></li>
+                         </ul>
+                     </nav>
+                  </div>
+              </header>
+                </div>
+                </div>
+            </div>
+          <div id="main-content">
               <div class="container_12">
-             
-                  <div class="flexslider">
-						
-						  <ul class="slides">
-						    <li>
-						      <img src="img/img1.jpeg" />
-						    </li>
-						    <li>
-						      <img src="img/img2.jpeg" />
-						    </li>
-						    <li>
-						      <img src="img/img3.jpeg" />
-						    </li>
-						    <li>
-						      <img src="img/img4.jpeg" />
-						    </li>
-						  </ul>
+                  <div class="grid_12">
+                  <div class="flexslider">		
+                                  <ul class="slides">
+                                    <li>
+                                      <img src="img/img1.jpeg" />
+                                    </li>
+                                    <li>
+                                      <img src="img/img2.jpeg" />
+                                    </li>
+                                    <li>
+                                      <img src="img/img3.jpeg" />
+                                    </li>
+                                    <li>
+                                      <img src="img/img4.jpeg" />
+                                    </li>
+                                  </ul>
 				</div>
 	
               </div>
-              <div class=”clear”></div>
+              </div>
+              <div class="clear"></div>
                <div class="container_12">
+                   <div class="products">
                     <div class="grid_3">
-                        <div class="products">
-                             <h2>Accessori Uomo</h2>
-                            <div class="circle" style="background-image:url('img/prodotti/cinta_uomo.jpg')"></div>
-                        </div>
-                    </div>
+                        <a href="#">
+                          <h3 class="title">Accessori Uomo</h3>
+                                    <span><img src="img/prodotti/cinta_uomo.jpg" alt="Accessorio Uomo" /></span>
+                         </a>
+                     </div>
+                          
+                       
+                    <div class="grid_3">
+                        <a href="#">
+                          <h3 class="title">Accessori Donna</h3>                      
+                                    <span><img src="img/prodotti/gufo_donna.jpg" alt="Accessorio Donna" /></span>
+                          </a>
+                     </div>
+                   <div class="grid_3 ">
+                        <a href="#">
+                          <h3 class="title">Articoli per Fumatori</h3>
+                                    <span><img src="img/prodotti/fumo.jpg" alt="Accessori per Fumatori"/></span>
+                        </a>
+                     </div>
                    <div class="grid_3">
-                       <div class="products">
-                           <h2>Accessori Donna</h2>
-                           <div class="circle" style="background-image:url('img/prodotti/gufo_donna.jpg')"></div>
-                        </div>
+                       <a href="#">
+                          <h3 class="title">Varie</h3>
+                                <span><img src="img/prodotti/varie.jpg" alt="Varie" /></span>
+                      </a>
                     </div>
-                   <div class="grid_3">
-                       <div class="products">
-                           <h2>Articoli per fumatori</h2>
-                          <div class="circle" style="background-image:url('img/prodotti/fumo.jpg')"></div>
-                        </div>
-                    </div>
-                   <div class="grid_3">
-                       <div class="products">
-                           <h2>Varie</h2>
-                           <div class="circle" style="background-image:url('img/prodotti/varie.jpg')"></div>
-                        </div>
-                       </div>
-                    </div>
+                 </div>
             </div>
               
         </div>
          <div class="push"></div>
       </div>
-        <footer class="container_12">
+      <div class="container_12">
+        <footer class="grid_12">
             <p>Creted by <strong>Matteo Gentile</strong> with 960.gs fluid grid</p>
-			<p class="copyright">Copyright &copy; 2014 Matteo Gentile &mdash; <a title="Fake" href="http://localhost/#">Web Design</a></p>
+			<p class="copyright"> 2014 Matteo Gentile &mdash; <a title="Fake" href="http://localhost/#">http://example.com</a></p>
         </footer>
-
+      </div>
     </body>
     
 <script src="js/libs/jquery-1.11.0.min.js"></script>

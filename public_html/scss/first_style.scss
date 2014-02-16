@@ -1,7 +1,6 @@
 @import "_custom.scss";
 
 
-
 /* ===========================
    ======= Body style ======== 
    =========================== */
@@ -13,39 +12,86 @@ html, body {
 body {
 	background-color: $rosso_bordeaux;
 	color: $gray_1;
-	font-size: 87.5%; /* Default is 16px so our base font size will be: 14px */
 	font-family: $font-stack;
-	line-height: 1.429;
 	margin: 0;
 	padding: 0;
-	text-align: left;
-	}
+	text-align: center;
+}
 	
 	
 /* ===========================
    ========= Headings ======== 
    =========================== */
 
-h2 {font-size: 1,571428571em}	/* 22px */
-h3 {font-size: 1,428571429em}	/* 20px */
-h4 {font-size: 1,285714286em}	/* 18px */
-h5 {font-size: 1,142857143em}	/* 16px */
-h6 {font-size: 1em}				/* base font: 14px; desidered font 14px; desideredfont/basefont=1em  */
+/* base font: inherit (16px)  */
+
+h1 {
+    font-size:1.5em;    /* 24px */
+}
+h2 {
+    font-size: 1.375em;  /* 22px */
+}	
+h3 {
+    font-size: 1.25em;  /* 20px */
+}	
+h4 {
+    font-size: 1.125em; /* 18px */
+}	
+h5 {
+    font-size: 1em;     /* 16px */
+}	
+h6 {
+    font-size: 0.875em;     /* 14px */
+}				
 
 h2, h3, h4, h5, h6 {
-	font-weight: 400;
+	font-weight: bold;
 	line-height: 1.1;
-	margin-bottom: .8em;
 }
 
 
+#main-content, #head-content {
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 1em 0;
+    width: 100%;
+}
+
+/* ===========================
+   ===== Flexible Images ===== 
+   =========================== */
+img,
+embed,
+object,
+video {
+max-width: 100%;
+}
+
+/* ===========================
+   ===== Link Styles ===== 
+   =========================== */
+a {
+    color: $rosso_bordeaux;
+    text-decoration: none;
+}
 /* ===========================
    ===== Main Navigation ===== 
    =========================== */
-
-header .container_12 {
-    background-color: $gray_1;
+header {
+    clear: both;
+    padding: 1em 0 0;
+    max-width: 100%;
+     background-color: $dirty_white;
+     /*background-size: cover;*/
      @include border-bottom-radius(5px);
+    }
+    
+
+
+#navbar {
+    margin-top: 0.6em;
+    display: block;
+    clear: both;
 }
 
 nav ul{
@@ -61,46 +107,87 @@ nav li {
     display:inline-block; 
 }
 
+nav li.active a {
+    color: $rosso_bordeaux;
+}
 nav li a {
     display: block;
-    padding: 10px 15px;
+    padding: 10px 20%;
     text-decoration: none;
     color: $dirty_white;
+    transition: color 0.3s linear 0s;
     &:hover {
         color: $rosso_bordeaux; 
-        @include border-radius(5px);
     }
-    
+      
+}
+.social {
+    float: right;
+    display: block;
+}
+.social a{
+     text-decoration: none;
 }
 
-header img {
-    width: 10%;
-}
 
-.centered {  
-  margin: 0 45%;
-}
 
 
 /* ===========================
    ===== Main Content ===== 
    =========================== */
 
-.main-content {
-    margin: 0 auto;
-    overflow: hidden;
-    width: 100%;
-    padding: 1em 0;
+    
+.text_box {
+     background-color: $dirty_white;
+     @include border-radius(5px);
+     overflow: hidden;  /* container height 100% when contais float elements*/
+     p {
+        padding: 2%;
+        text-align: left;
+        font-size: 100%;
+        overflow: hidden;
+     }
     }
     
-/* .products {
-    padding: 1em;
-    background-color: $dirty_white;
-     @include border-radius(5px);
-    }*/
+
+.title {  
+    @include border-top-radius(5px);
+    background-color: $gray_1;
+    padding: 0.4em 0;
+    color: $dirty_white;
+}
+
+.products {
+     div{
+        
+        margin-top: 1em ;
+        margin-bottom: 1em ;
+     }
+      span{
+        display: block;
+        padding: 0.4em;
+        background-color: $gray_1;
+         @include border-bottom-radius(5px);
+    }
+} 
+
+.products a h3 {
+     color: $dirty_white;
+     transition: color 0.3s linear 0s;
+     &:hover {
+         color: $rosso_bordeaux;
+     }
+}
+
+#figure {
+    float: right;
+    margin: 2%;
+    width:31.333%;
+}
+
 
 /* ===========================
-   ===== 	Footer       ===== 
+   ===== 	Footer   ===== 
    =========================== */
 
 .wrapper {
@@ -128,14 +215,68 @@ footer a:link {
 	color: $dirty_white;
 }
 
-.circle {
-  display: block;
-  width: 150px;
-  height: 150px;
-  margin: 1em auto;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  @include border-radius(99em);
-  border: 5px solid $gray_light;
-  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3); }
+/* ===========================
+   =====     Contacts    ===== 
+   =========================== */
+
+#contacts {
+    text-align: left;
+    font-size: 200%;
+    padding: 1em 0.5em;
+    img{
+         float: none;
+         margin: 20px auto 20px;
+         position: relative;
+         display: block;
+    }
+    p{
+        padding: .6em;
+    }
+}
+
+/* ===========================
+   =====     Slider   ===== 
+   =========================== */
+
+
+
+/* ===========================
+   =====    Media Query ===== 
+   =========================== */
+
+/* Display sotto i 1279 px (Tablet) */
+
+@media screen and (max-width:1279px) {
+
+    body {
+        font-size: 75%;
+    }
+}	
+
+/*  Display sotto i768 px (Smartphone) */
+
+@media screen and (max-width:767px){
+                .container_12 {
+                    .grid_5 {                   /* trasformazione in un grid_1 push_4 (header)*/
+                       width:14.667%; 
+                       padding-left:8.333%;
+                    }
+                    .grid_3 {
+                       width:48.0%;
+                    }
+                    .grid_2 {
+                       width:39.667%;
+                    }
+                    .prefix_5 {
+                       padding-left:33.333%;
+                    }
+                    .grid_6 {
+                        width: 100%
+                    }
+                }
+                .social {
+                        display: inline-block;
+                        float: none;
+                        padding: 0 1em;
+                    }
+}
