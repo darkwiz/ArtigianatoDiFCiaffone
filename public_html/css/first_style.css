@@ -2,14 +2,14 @@
    ======= Body style ======== 
    =========================== */
 html, body {
-  height: 100%; }
+  min-height: 100%;
+  margin: 0;
+  padding: 0; }
 
 body {
-  background-color: #712422;
+  background-color: transparent;
   color: #7c8184;
   font-family: Helvetica, Verdana, Arial, sans-serif;
-  margin: 0;
-  padding: 0;
   text-align: center; }
 
 /* ===========================
@@ -47,9 +47,10 @@ h2, h3, h4, h5, h6 {
 #main-content {
   margin: 0 auto;
   overflow: hidden;
-  padding: 1em 0;
+  padding: 4em 0;
   width: 100%;
-  margin-top: 330px; }
+  margin-top: 270px;
+  background-color: #d7e2e4; }
 
 #head-content {
   position: fixed;
@@ -57,7 +58,19 @@ h2, h3, h4, h5, h6 {
   top: 0;
   width: 100%;
   z-index: 1000;
-  background-color: #f6ffff; }
+  background-color: #f6ffff;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); }
+
+#footer-content {
+  width: 100%;
+  overflow: hidden;
+  background: none repeat scroll 0 0 rgba(124, 129, 132, 0.6);
+  /* #7C8184 */
+  -webkit-box-shadow: inset 0 10px 10px -10px;
+  -moz-box-shadow: inset 0 10px 10px -10px;
+  box-shadow: inset 0 10px 10px -10px; }
 
 /* ===========================
    ===== Flexible Images ===== 
@@ -81,8 +94,7 @@ a {
 header {
   max-width: 100%;
   display: block;
-  background-color: #f6ffff;
-  /*background-size: cover;*/ }
+  background-color: #f6ffff; }
 
 .the-logo {
   background: none repeat scroll 0 0 #f6ffff;
@@ -202,17 +214,13 @@ nav li a {
   /* the bottom margin is the negative value of the footer's height */ }
 
 footer, .push {
-  padding-top: 20px;
+  /*	padding-top: 20px;*/
   height: 3em;
   clear: both; }
 
 footer {
-  -webkit-border-radius: 5px 5px 0 0;
-  -moz-border-radius: 5px 5px 0 0;
-  -ms-border-radius: 5px 5px 0 0;
-  border-radius: 5px 5px 0 0;
-  background: none repeat scroll 0 0 #7c8184;
-  /* #7C8184 */ }
+  padding-top: 15px;
+  /* Attenzione potrebbe rompere sticky footer */ }
 
 footer p {
   text-align: center;
