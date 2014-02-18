@@ -44,11 +44,20 @@ h2, h3, h4, h5, h6 {
   font-weight: bold;
   line-height: 1.1; }
 
-#main-content, #head-content {
+#main-content {
   margin: 0 auto;
   overflow: hidden;
   padding: 1em 0;
-  width: 100%; }
+  width: 100%;
+  margin-top: 330px; }
+
+#head-content {
+  position: fixed;
+  height: 270px;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #f6ffff; }
 
 /* ===========================
    ===== Flexible Images ===== 
@@ -70,31 +79,31 @@ a {
    ===== Main Navigation ===== 
    =========================== */
 header {
-  clear: both;
-  padding: 1em 0 0;
   max-width: 100%;
-  background-color: #f6ffff;
-  /*background-size: cover;*/
-  -webkit-border-radius: 0 0 5px 5px;
-  -moz-border-radius: 0 0 5px 5px;
-  -ms-border-radius: 0 0 5px 5px;
-  border-radius: 0 0 5px 5px; }
-
-#navbar {
-  margin-top: 0.6em;
   display: block;
-  clear: both; }
+  background-color: #f6ffff;
+  /*background-size: cover;*/ }
+
+.the-logo {
+  background: none repeat scroll 0 0 #f6ffff;
+  margin: 0 0 10px;
+  padding: 15px;
+  text-align: center; }
+  .the-logo img {
+    height: auto;
+    vertical-align: middle; }
+
+nav {
+  display: block;
+  max-width: 100%;
+  padding: 0; }
 
 nav ul {
   margin: 0;
   padding: 5px 0;
   text-align: center;
   list-style: none;
-  background-color: #7c8184;
-  -webkit-border-radius: 0 0 5px 5px;
-  -moz-border-radius: 0 0 5px 5px;
-  -ms-border-radius: 0 0 5px 5px;
-  border-radius: 0 0 5px 5px; }
+  background-color: #f6ffff; }
 
 nav li {
   display: inline-block; }
@@ -106,7 +115,7 @@ nav li a {
   display: block;
   padding: 10px 20%;
   text-decoration: none;
-  color: #f6ffff;
+  color: #7c8184;
   transition: color 0.3s linear 0s; }
   nav li a:hover {
     color: #712422; }
@@ -117,6 +126,21 @@ nav li a {
 
 .social a {
   text-decoration: none; }
+
+.submenu {
+  top: 270px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000; }
+  .submenu nav ul {
+    background-color: rgba(215, 226, 228, 0.6);
+    /* $gray_light */ }
+
+.menu-lev-2 {
+  margin: 0 auto;
+  background-color: #7c8184;
+  display: none;
+  max-width: 100%; }
 
 /* ===========================
    ===== Main Content ===== 
@@ -220,9 +244,6 @@ footer a:link {
    =====    Media Query ===== 
    =========================== */
 /* Display sotto i 1279 px (Tablet) */
-@media screen and (max-width: 1279px) {
-  body {
-    font-size: 75%; } }
 /*  Display sotto i768 px (Smartphone) */
 @media screen and (max-width: 767px) {
   .container_12 .grid_5 {

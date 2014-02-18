@@ -9,26 +9,25 @@ and open the template in the editor.
         <title>Art</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="css/html5reset.css" type="text/css">
-        <link rel="stylesheet" href="css/fluid_grid.css" type="text/css">
+         <link rel="stylesheet" href="css/fluid_grid.css" type="text/css">
+         <link rel="stylesheet" href="css/flexslider.css" type="text/css">
         <link rel="stylesheet" href="css/first_style.css" type="text/css">
-        <link rel="stylesheet" href="css/flexslider.css" type="text/css">
-        <meta name="viewport" content="width=device-width">
+        
+        <meta name="viewport" content="width=device-width" />
         
     </head>
     <body>
       <div class="wrapper">
-       <div class="head-content">
-         <div id="head-content">
+        <div id="head-content">
           <div class="container_12">
            <div class="grid_12">
          <header>
-
-           <div class="grid_2 prefix_5">
-               <div class="logo">
-                     <img src="img/logo.jpg">
-               </div>
-           </div>
-                     <div class="grid_5">
+             <h1 class="the-logo" title="The Logo">
+                <a class="ajax" href="/">
+                    <img alt="Logo" src="img/logo.png">
+                </a>
+             </h1>
+        <!--    <div class="grid_5 push_7">
                          <div class="social">
                                              <a href="#">
                                                  <img class="social_icon" src="img/social/Facebook.png">
@@ -41,23 +40,28 @@ and open the template in the editor.
                                                      <img class="social_icon" src="img/social/Pinterest.png">
                                              </a>
                             </div> 
-                     </div>
+                     </div>  -->
 
-
-                 <div id="navbar">
-                     <nav>
+              
+                    <nav id="navbar primary">
                          <ul>
                              <li><a href="index.html">Home</a></li>
-                             <li  class="active"><a href="chi_siamo.html">Chi Siamo</a></li>
-                             <li><a href="contatti.html">Contatti</a></li>
-                             <li><a href="prodotti.html">Prodotti</a></li>
+                             <li class="active"><a href="chi_siamo.html">Chi Siamo</a></li>
+                             <li ><a href="contatti.html">Contatti</a></li>
+                             <li id="products_cat" >
+                                 <a href="prodotti.html">Prodotti</a></li>
                          </ul>
                      </nav>
-                  </div>
               </header>
+                
                 </div>
                 </div>
             </div>
+          <div class="submenu">
+                 <div class="menu-lev-2" style="display: none;">
+                     
+                 </div>
+             </div>
           <div id="main-content">
               <div class="container_12">
                   <div class="grid_12">
@@ -112,5 +116,6 @@ and open the template in the editor.
 <!-- Slider -->
 <script src="js/libs/jquery.flexslider-min.js"></script>
 <script src="js/slide.js" defer=""></script>
+<script src="js/menu.js" ></script>
 
 </html>
