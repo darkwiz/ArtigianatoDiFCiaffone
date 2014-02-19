@@ -6,17 +6,15 @@
    =========================== */
 
 html, body {
-    min-height: 100%;
-    margin: 0;
-    padding: 0;
+    height: 100%;
 }
    
 body {
-	background-color: transparent;
+        background-color: $gray_light;
 	color: $gray_1;
 	font-family: $font-stack;
 	text-align: center;
-        
+        min-width: 240px;
 }
 	
 	
@@ -56,12 +54,13 @@ h2, h3, h4, h5, h6 {
     overflow: hidden;
     padding: 4em 0;
     width: 100%;
-    margin-top: 270px;
-    background-color: $gray_light;
+    margin-top: 160px;
+    
 }
  #head-content {
     position: fixed;
-    height: 270px;
+    overflow: hidden;
+    height: 160px;
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -90,26 +89,28 @@ video {
 /* ===========================
    ===== Link Styles ===== 
    =========================== */
+
 a {
     color: $rosso_bordeaux;
     text-decoration: none;
 }
+
 /* ===========================
    ===== Main Navigation ===== 
    =========================== */
+
 header {
     max-width: 100%;
     display: block;
     background-color: $dirty_white;
-     
+    height: 160px;
     }
     
-
 
 .the-logo {
     background: none repeat scroll 0 0 $dirty_white;
     margin: 0 0 10px;
-    padding: 15px;
+    padding: 7px;
     text-align: center;
     img {
         height: auto;
@@ -118,10 +119,9 @@ header {
 }
 
 nav {
-    display: block;
     max-width: 100%;
-    padding: 0;
 }
+
 
 nav ul{
     margin: 0;
@@ -141,7 +141,7 @@ nav li.active a {
 
 nav li a {
     display: block;
-    padding: 10px 20%;
+    padding: 10px 20px;
     text-decoration: none;
     color: $gray_1;
     transition: color 0.3s linear 0s;
@@ -159,21 +159,40 @@ nav li a {
 }
 
 .submenu {
-    top: 270px;
+    top: 160px;
     position: fixed;
     width: 100%;
     z-index: 1000;
     nav ul {
-    background-color: rgba(215, 226, 228, 0.6);         /* $gray_light */ 
+         background-color: rgba(215, 226, 228, 0.6);         /* $gray_light */ 
     }
 }
-
 
 .menu-lev-2 {
     margin: 0 auto;
     background-color: $gray_1;
     display: none;
     max-width: 100%;
+}
+    
+  .slicknav_menu{
+	display: none;
+}
+
+/* Menù mobile*/
+
+.hidden-container {
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+nav.mobile {
+    display: none;
+    height: 0;
+    visibility: hidden;
+}
+#mobile_menu {
+    display: none;
 }
 
 /* ===========================
@@ -183,8 +202,8 @@ nav li a {
     
 .text_box {
      background-color: $dirty_white;
-     @include border-radius(5px);
      overflow: hidden;  /* container height 100% when contais float elements*/
+     @include box-shadow(0, 5px, 5px, rgba(0, 0, 0, 0.2));
      p {
         padding: 2%;
         text-align: left;
@@ -194,32 +213,30 @@ nav li a {
     }
     
 
-.title {  
-    @include border-top-radius(5px);
-    background-color: $gray_1;
+.title {
+    background-color: $rosso_bordeaux;
     padding: 0.4em 0;
     color: $dirty_white;
 }
 
 .products {
      div{
-        
         margin-top: 1em ;
         margin-bottom: 1em ;
      }
       span{
         display: block;
         padding: 0.4em;
-        background-color: $gray_1;
-        @include border-bottom-radius(5px);
+        background-color: $dirty_white;
+        @include box-shadow(0, 5px, 5px, rgba(0, 0, 0, 0.2));
     }
 } 
 
 .products a h3 {
-     color: $dirty_white;
+     color: $gray_light;
      transition: color 0.3s linear 0s;
      &:hover {
-         color: $rosso_bordeaux;
+         color: $dirty_white;
      }
 }
 
@@ -238,17 +255,16 @@ nav li a {
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
-	margin: 0 auto -3em; /* the bottom margin is the negative value of the footer's height */
+	margin: 0 auto -4em; /* the bottom margin is the negative value of the footer's height */
 }
 
 footer, .push {
-/*	padding-top: 20px;*/
-	height: 3em;
+	height: 4em;
         clear: both;
-       
 }
+
 footer {
-    padding-top: 15px; /* Attenzione potrebbe rompere sticky footer */
+        padding-top: 20px;
 }
 
 footer p {
@@ -279,9 +295,6 @@ footer a:link {
     }
 }
 
-/* ===========================
-   =====     Slider   ===== 
-   =========================== */
 
 
 
@@ -293,13 +306,42 @@ footer a:link {
 
 @media screen and (max-width:1279px) {
 
-    
+   
     //Insert code here (no body font:75%) just single elements 
 }	
 
 /*  Display sotto i768 px (Smartphone) */
 
 @media screen and (max-width:767px){
+    
+     #head-content{
+        display: none;
+    }
+    
+    #main-content{
+        margin: 0 auto;
+    }
+    
+    #menu {
+        display:none;
+	}
+        
+    .slicknav_menu {
+         display:block;
+      /* position: fixed;
+         width: 100%;
+         top: 0;*/
+                
+     }
+     
+     #mobile_menu {
+        display: block;
+    }
+    
+    .menu-lev-2 {
+        display: none;
+    }
+
                 .container_12 {
                     .grid_5 {                   /* trasformazione in un grid_1 push_4 (header)*/
                        width:14.667%; 

@@ -1,16 +1,16 @@
+@charset "UTF-8";
 /* ===========================
    ======= Body style ======== 
    =========================== */
 html, body {
-  min-height: 100%;
-  margin: 0;
-  padding: 0; }
+  height: 100%; }
 
 body {
-  background-color: transparent;
+  background-color: #d7e2e4;
   color: #7c8184;
   font-family: Helvetica, Verdana, Arial, sans-serif;
-  text-align: center; }
+  text-align: center;
+  min-width: 240px; }
 
 /* ===========================
    ========= Headings ======== 
@@ -49,12 +49,12 @@ h2, h3, h4, h5, h6 {
   overflow: hidden;
   padding: 4em 0;
   width: 100%;
-  margin-top: 270px;
-  background-color: #d7e2e4; }
+  margin-top: 160px; }
 
 #head-content {
   position: fixed;
-  height: 270px;
+  overflow: hidden;
+  height: 160px;
   top: 0;
   width: 100%;
   z-index: 1000;
@@ -94,21 +94,20 @@ a {
 header {
   max-width: 100%;
   display: block;
-  background-color: #f6ffff; }
+  background-color: #f6ffff;
+  height: 160px; }
 
 .the-logo {
   background: none repeat scroll 0 0 #f6ffff;
   margin: 0 0 10px;
-  padding: 15px;
+  padding: 7px;
   text-align: center; }
   .the-logo img {
     height: auto;
     vertical-align: middle; }
 
 nav {
-  display: block;
-  max-width: 100%;
-  padding: 0; }
+  max-width: 100%; }
 
 nav ul {
   margin: 0;
@@ -125,7 +124,7 @@ nav li.active a {
 
 nav li a {
   display: block;
-  padding: 10px 20%;
+  padding: 10px 20px;
   text-decoration: none;
   color: #7c8184;
   transition: color 0.3s linear 0s; }
@@ -140,7 +139,7 @@ nav li a {
   text-decoration: none; }
 
 .submenu {
-  top: 270px;
+  top: 160px;
   position: fixed;
   width: 100%;
   z-index: 1000; }
@@ -154,17 +153,33 @@ nav li a {
   display: none;
   max-width: 100%; }
 
+.slicknav_menu {
+  display: none; }
+
+/* Menù mobile*/
+.hidden-container {
+  margin: 0 auto;
+  position: relative;
+  z-index: 1; }
+
+nav.mobile {
+  display: none;
+  height: 0;
+  visibility: hidden; }
+
+#mobile_menu {
+  display: none; }
+
 /* ===========================
    ===== Main Content ===== 
    =========================== */
 .text_box {
   background-color: #f6ffff;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  border-radius: 5px;
   overflow: hidden;
-  /* container height 100% when contais float elements*/ }
+  /* container height 100% when contais float elements*/
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); }
   .text_box p {
     padding: 2%;
     text-align: left;
@@ -172,11 +187,7 @@ nav li a {
     overflow: hidden; }
 
 .title {
-  -webkit-border-radius: 5px 5px 0 0;
-  -moz-border-radius: 5px 5px 0 0;
-  -ms-border-radius: 5px 5px 0 0;
-  border-radius: 5px 5px 0 0;
-  background-color: #7c8184;
+  background-color: #712422;
   padding: 0.4em 0;
   color: #f6ffff; }
 
@@ -186,17 +197,16 @@ nav li a {
 .products span {
   display: block;
   padding: 0.4em;
-  background-color: #7c8184;
-  -webkit-border-radius: 0 0 5px 5px;
-  -moz-border-radius: 0 0 5px 5px;
-  -ms-border-radius: 0 0 5px 5px;
-  border-radius: 0 0 5px 5px; }
+  background-color: #f6ffff;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); }
 
 .products a h3 {
-  color: #f6ffff;
+  color: #d7e2e4;
   transition: color 0.3s linear 0s; }
   .products a h3:hover {
-    color: #712422; }
+    color: #f6ffff; }
 
 #figure {
   float: right;
@@ -210,17 +220,15 @@ nav li a {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -3em;
+  margin: 0 auto -4em;
   /* the bottom margin is the negative value of the footer's height */ }
 
 footer, .push {
-  /*	padding-top: 20px;*/
-  height: 3em;
+  height: 4em;
   clear: both; }
 
 footer {
-  padding-top: 15px;
-  /* Attenzione potrebbe rompere sticky footer */ }
+  padding-top: 20px; }
 
 footer p {
   text-align: center;
@@ -246,14 +254,32 @@ footer a:link {
     padding: .6em; }
 
 /* ===========================
-   =====     Slider   ===== 
-   =========================== */
-/* ===========================
    =====    Media Query ===== 
    =========================== */
 /* Display sotto i 1279 px (Tablet) */
 /*  Display sotto i768 px (Smartphone) */
 @media screen and (max-width: 767px) {
+  #head-content {
+    display: none; }
+
+  #main-content {
+    margin: 0 auto; }
+
+  #menu {
+    display: none; }
+
+  .slicknav_menu {
+    display: block;
+    /* position: fixed;
+       width: 100%;
+       top: 0;*/ }
+
+  #mobile_menu {
+    display: block; }
+
+  .menu-lev-2 {
+    display: none; }
+
   .container_12 .grid_5 {
     /* trasformazione in un grid_1 push_4 (header)*/
     width: 14.667%;

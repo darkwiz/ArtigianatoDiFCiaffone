@@ -4,4 +4,7 @@ $(document).ready(function(){
                 animation: "slide"
               });
             });
+           $('#menu').slicknav({
+		prependTo:'#mobile_menu'
+});
 });
