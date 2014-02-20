@@ -30,8 +30,10 @@ var DisplaySubmenu =
 //                   console.log("Prevented on " + event.target.tagName);
                      if ( $( this.myConfig.target ).is( ":hidden" ) ) {
                              $( this.myConfig.target  ).slideDown( "slow" );
+                             $("span.arrow").html("▼");
                                 } else {
-                            $( this.myConfig.target ).slideUp( "slow" );
+                                $( this.myConfig.target ).slideUp( "slow" );
+                             $("span.arrow").html("►");
                 }
          }
 
@@ -46,17 +48,21 @@ $(function() {
                    DisplaySubmenu.showSubmenu(event);}
                );
     });
-//     var stickyHeaderTop = $('#stickyheader').offset().top;
-// 
-//        $(window).scroll(function(){
-//                if( $(window).scrollTop() > stickyHeaderTop ) {
-//                        $('#stickyheader').css({position: 'fixed', top: '0px'});
-//                        $('#stickyalias').css('display', 'block');
-//                } else {
-//                        $('#stickyheader').css({position: 'static', top: '0px'});
-//                        $('#stickyalias').css('display', 'none');
-//                }
-//        });
+    
+     var stickyHeaderTop = $('#stickyheader').offset().top;
+      var stickySubmenuTop = $('#stickysubmenu').offset().top;
+ 
+        $(window).scroll(function(){
+                if( $(window).scrollTop() > stickyHeaderTop || $(window).scrollTop() > stickySubmenuTop) {
+                        $('#stickyheader').css({position: 'fixed', top: '0px'});
+                        $('#stickysubmenu').css({position: 'fixed', top: '46px'});
+                        $('#stickyalias').css('display', 'block');
+                } else {
+                        $('#stickyheader').css({position: 'static', top: '0px'});
+                        $('#stickysubmenu').css({position: 'static', top: '46px'});
+                        $('#stickyalias').css('display', 'none');
+                }
+        });
 //    $(window).resize(function () {
 //                    $(DisplaySubmenu.myConfig.target).hide();
 //            });
