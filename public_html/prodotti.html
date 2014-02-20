@@ -32,6 +32,24 @@ and open the template in the editor.
     </head>
     <body>
       <div class="wrapper">
+          <div class="hidden-container">
+                <nav class="mobile">
+                        <ul id="menu">
+                             <li class="active"><a href="index.html">Home</a></li>
+                             <li><a href="chi_siamo.html">Chi Siamo</a></li>
+                             <li ><a href="contatti.html">Contatti</a></li>
+                             <li>
+                                 <a href="prodotti.html">Prodotti</a>
+                              <ul>
+                                    <li><a href="#">Categoria1</a></li>
+                                    <li><a href="#">Categoria2</a></li>
+                                    <li><a href="#">Categoria3</a></li>
+                                    <li><a href="#">Categoria4</a></li>
+                              </ul>
+                             </li>
+                         </ul>
+                </nav>
+            </div>
         <div id="head-content">
           <div class="container_12">
            <div class="grid_12">
@@ -100,6 +118,7 @@ and open the template in the editor.
 
 <!-- Slider -->
 <script src="js/libs/jquery.flexslider-min.js"></script>
+<script src="js/libs/jquery.slicknav.min.js"></script>
 <script src="js/slide.js" ></script>
 <script src="js/menu.js" ></script>
 

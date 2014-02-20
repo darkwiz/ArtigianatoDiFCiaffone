@@ -103,17 +103,17 @@ header {
     max-width: 100%;
     display: block;
     background-color: $dirty_white;
-    height: 160px;
     }
     
 
 .the-logo {
     background: none repeat scroll 0 0 $dirty_white;
     margin: 0 0 10px;
-    padding: 7px;
+    padding: 5px;
     text-align: center;
     img {
         height: auto;
+        max-height: 92px;
         vertical-align: middle;
     }
 }
@@ -150,6 +150,7 @@ nav li a {
     }
       
 }
+
 .social {
     float: right;
     display: block;
@@ -191,7 +192,8 @@ nav.mobile {
     height: 0;
     visibility: hidden;
 }
-#mobile_menu {
+
+#mobile_menu{
     display: none;
 }
 
@@ -203,6 +205,7 @@ nav.mobile {
 .text_box {
      background-color: $dirty_white;
      overflow: hidden;  /* container height 100% when contais float elements*/
+     max-width: 100%;
      @include box-shadow(0, 5px, 5px, rgba(0, 0, 0, 0.2));
      p {
         padding: 2%;
@@ -217,6 +220,7 @@ nav.mobile {
     background-color: $rosso_bordeaux;
     padding: 0.4em 0;
     color: $dirty_white;
+    height: 2em;
 }
 
 .products {
@@ -280,7 +284,7 @@ footer a:link {
    =====     Contacts    ===== 
    =========================== */
 
-#contacts {
+.contacts {
     text-align: left;
     font-size: 200%;
     padding: 1em 0.5em;
@@ -294,7 +298,6 @@ footer a:link {
         padding: .6em;
     }
 }
-
 
 
 
@@ -315,33 +318,46 @@ footer a:link {
 @media screen and (max-width:767px){
     
      #head-content{
-        display: none;
+        height: 100px;
+        position: relative;
+        @include box-shadow(0,0,0,0)
     }
     
     #main-content{
-        margin: 0 auto;
+        margin-top: 3em;
+        padding-top: 0;
     }
     
     #menu {
         display:none;
 	}
         
-    .slicknav_menu {
-         display:block;
-      /* position: fixed;
-         width: 100%;
-         top: 0;*/
-                
-     }
-     
-     #mobile_menu {
+    #mobile_menu{
         display: block;
     }
-    
-    .menu-lev-2 {
+        
+    .slicknav_menu {
+         display:block;
+         width: 100%;
+     }
+
+    .menu-lev-2, .submenu {
         display: none;
     }
 
+    .contacts {
+       
+        p{
+            padding: .4em;
+            font-size: 0.75em;
+        }
+        h3 {
+            font-size: 0.75em;
+        }
+        h2 {
+            font-size: 0.875em;
+        }
+    }
                 .container_12 {
                     .grid_5 {                   /* trasformazione in un grid_1 push_4 (header)*/
                        width:14.667%; 
@@ -357,7 +373,9 @@ footer a:link {
                        padding-left:33.333%;
                     }
                     .grid_6 {
-                        width: 100%
+                        width: 100%;
+                        margin-left: 0;
+                        margin-right: 0;
                     }
                 }
                 .social {
@@ -365,4 +383,18 @@ footer a:link {
                         float: none;
                         padding: 0 1em;
                     }
+                    
+@media screen and (max-width:251px){
+    .contacts{
+        p{
+            font-size: 0.5em;
+        }
+         h3 {
+            font-size: 0.5em;
+        }
+        h2 {
+            font-size: 0.5em;
+        }
+    }
+}
 }

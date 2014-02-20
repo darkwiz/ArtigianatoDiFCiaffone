@@ -94,16 +94,16 @@ a {
 header {
   max-width: 100%;
   display: block;
-  background-color: #f6ffff;
-  height: 160px; }
+  background-color: #f6ffff; }
 
 .the-logo {
   background: none repeat scroll 0 0 #f6ffff;
   margin: 0 0 10px;
-  padding: 7px;
+  padding: 5px;
   text-align: center; }
   .the-logo img {
     height: auto;
+    max-height: 92px;
     vertical-align: middle; }
 
 nav {
@@ -177,6 +177,7 @@ nav.mobile {
   background-color: #f6ffff;
   overflow: hidden;
   /* container height 100% when contais float elements*/
+  max-width: 100%;
   -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); }
@@ -189,7 +190,8 @@ nav.mobile {
 .title {
   background-color: #712422;
   padding: 0.4em 0;
-  color: #f6ffff; }
+  color: #f6ffff;
+  height: 2em; }
 
 .products div {
   margin-top: 1em;
@@ -241,16 +243,16 @@ footer a:link {
 /* ===========================
    =====     Contacts    ===== 
    =========================== */
-#contacts {
+.contacts {
   text-align: left;
   font-size: 200%;
   padding: 1em 0.5em; }
-  #contacts img {
+  .contacts img {
     float: none;
     margin: 20px auto 20px;
     position: relative;
     display: block; }
-  #contacts p {
+  .contacts p {
     padding: .6em; }
 
 /* ===========================
@@ -260,25 +262,36 @@ footer a:link {
 /*  Display sotto i768 px (Smartphone) */
 @media screen and (max-width: 767px) {
   #head-content {
-    display: none; }
+    height: 100px;
+    position: relative;
+    -webkit-box-shadow: 0 0 0 0;
+    -moz-box-shadow: 0 0 0 0;
+    box-shadow: 0 0 0 0; }
 
   #main-content {
-    margin: 0 auto; }
+    margin-top: 3em;
+    padding-top: 0; }
 
   #menu {
     display: none; }
 
-  .slicknav_menu {
-    display: block;
-    /* position: fixed;
-       width: 100%;
-       top: 0;*/ }
-
   #mobile_menu {
     display: block; }
 
-  .menu-lev-2 {
+  .slicknav_menu {
+    display: block;
+    width: 100%; }
+
+  .menu-lev-2, .submenu {
     display: none; }
+
+  .contacts p {
+    padding: .4em;
+    font-size: 0.75em; }
+  .contacts h3 {
+    font-size: 0.75em; }
+  .contacts h2 {
+    font-size: 0.875em; }
 
   .container_12 .grid_5 {
     /* trasformazione in un grid_1 push_4 (header)*/
@@ -291,9 +304,18 @@ footer a:link {
   .container_12 .prefix_5 {
     padding-left: 33.333%; }
   .container_12 .grid_6 {
-    width: 100%; }
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0; }
 
   .social {
     display: inline-block;
     float: none;
     padding: 0 1em; } }
+@media screen and (max-width: 767px) and (max-width: 251px) {
+  .contacts p {
+    font-size: 0.5em; }
+  .contacts h3 {
+    font-size: 0.5em; }
+  .contacts h2 {
+    font-size: 0.5em; } }

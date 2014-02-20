@@ -4,7 +4,7 @@
 
 .slicknav_btn { position: relative; display: block; vertical-align: middle; float: right; padding: 0.438em 0.625em 0.438em 0.625em; line-height: 1.125em; cursor: pointer; }
 .slicknav_menu  .slicknav_menutxt { display: block; line-height: 1.188em; float: left; }
-.slicknav_menu .slicknav_icon { float: left; margin: 0.188em 0 0 0.438em; }
+.slicknav_menu .slicknav_icon { float: right; margin: 0.188em 0 0 0.438em; padding: 0 0.5em;}
 .slicknav_menu .slicknav_no-text { margin: 0 }
 .slicknav_menu .slicknav_icon-bar { display: block; width: 1.125em; height: 0.125em; -webkit-border-radius: 1px; -moz-border-radius: 1px; border-radius: 1px; -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25); -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25); box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25); }
 .slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar { margin-top: 0.188em }
@@ -31,33 +31,30 @@
 }
 /* Button */
 .slicknav_btn {
-	margin: 5px 5px 6px;	
+        padding: 1.3%;
+	margin: 0%;	
 	text-decoration:none;	
-	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);	
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;  
-	background-color: #222222;
+	background-color: #F6FFFF;
+	width: 97%;
+	font-size: 1.5em;
 }
 /* Button Text */
 .slicknav_menu  .slicknav_menutxt {	
-	color: #FFF;
-	font-weight: bold;	
-	text-shadow: 0 1px 3px #000;	
+	color: #7C8184;
+	font-weight: bold;
 }
 /* Button Lines */
 .slicknav_menu .slicknav_icon-bar {
-  background-color: #f5f5f5;
+        background-color: #7C8184;
 }
 .slicknav_menu {
-	background:#4c4c4c;
-	padding:5px;
+        background: #F6FFFF;
 }
 .slicknav_nav {
-	color:#fff;
+        color:  #7C8184;
 	margin:0;	
 	padding:0;
-	font-size:0.875em;
+	font-size: 1.25em;
 }
 .slicknav_nav, .slicknav_nav ul {
 	list-style: none;
@@ -75,25 +72,27 @@
 	padding:5px 10px;
 	margin:2px 5px;
 	text-decoration:none;
-	color:#fff;
+        color:  #7C8184;
+       
 }
 .slicknav_nav .slicknav_item a {
 	padding:0;
 	margin:0;
 }
+
 .slicknav_nav .slicknav_item:hover {
-	-webkit-border-radius: 6px;
+/*	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
-	border-radius: 6px;
-	background:#ccc;
-	color:#fff;	
+	border-radius: 6px;*/
+	background:#D7E2E4;
+	color:#A52926;	
 }
 .slicknav_nav a:hover{
-	-webkit-border-radius: 6px;
+/*	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
-	border-radius: 6px;
-	background:#ccc;
-	color:#222;
+	border-radius: 6px;*/
+	background:#D7E2E4;
+	color:#A52926;
 }
 .slicknav_nav .slicknav_txtnode {
      margin-left:15px;   
