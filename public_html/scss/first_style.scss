@@ -52,7 +52,7 @@ h2, h3, h4, h5, h6 {
 #main-content {
     margin: 0 auto;
     overflow: hidden;
-    padding: 4em 0;
+    padding: 1em 0;
     width: 100%;
 }
  #head-content {
@@ -138,6 +138,7 @@ nav li.active a {
 }
 
 nav li a {
+    font-size: 1.25em;
     display: block;
     padding: 10px 20px;
     text-decoration: none;
@@ -181,7 +182,7 @@ nav li a {
 #stickyheader, #stickysubmenu {
             left: 0;
             width: 100%;
-            height: 46px;
+            height: 50px;
             z-index: 1004;
             }
 
@@ -238,7 +239,7 @@ nav.mobile {
     height: 2em;
 }
 
-.products {
+.categories {
      div{
         margin-top: 1em ;
         margin-bottom: 1em ;
@@ -251,7 +252,7 @@ nav.mobile {
     }
 } 
 
-.products a h3 {
+.categories a h3 {
      color: $gray_light;
      transition: color 0.3s linear 0s;
      &:hover {
@@ -265,6 +266,55 @@ nav.mobile {
     width:31.333%;
 }
 
+.products {
+     div{
+        margin-top: 1em ;
+        margin-bottom: 1em ;
+         }
+      span{
+        display: block;
+        padding: 1em 0;
+        background-color: $dirty_white;
+        @include box-shadow(0, 5px, 5px, rgba(0, 0, 0, 0.2));
+    }
+    .product_name {
+        background-color: $rosso_bordeaux;
+        color: $dirty_white;
+        height: 2em;
+        line-height:2;
+        vertical-align:middle;
+        
+    }
+} 
+
+.breadcrums {
+    display: block;
+    float: left;
+    font-size: 1.5em;
+    font-weight: 400;
+    text-align: left;
+    padding: 1em 0;
+    min-height:100%;
+    a { 
+        line-height: 2.2;
+        margin: 0 9px;
+        padding-bottom: 4px;
+        color: $gray_1;
+        text-decoration: none;
+        transition: color 0.2s ease-in-out 0s;
+    }
+    a.active {
+        color: $rosso_bordeaux;
+        border-bottom: 3px solid $rosso_bordeaux;
+        font-weight: 500;
+        &:hover {
+         color: $dirty_white;
+         border-bottom: 3px solid $dirty_white;
+     }
+    }
+    
+    
+}
 
 /* ===========================
    ===== 	Footer   ===== 
@@ -359,6 +409,10 @@ footer a:link {
     .menu-lev-2, .submenu {
         display: none;
     }
+    #stickyheader {
+        display: none;
+    }
+    
 
     .contacts {
        
@@ -381,8 +435,11 @@ footer a:link {
                     .grid_3 {
                        width:48.0%;
                     }
+                    .grid_4{
+                       width:48.0%;
+                       }
                     .grid_2 {
-                       width:39.667%;
+                       width:48.0%;
                     }
                     .prefix_5 {
                        padding-left:33.333%;

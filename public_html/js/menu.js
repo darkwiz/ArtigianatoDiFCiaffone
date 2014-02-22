@@ -11,7 +11,8 @@ var DisplaySubmenu =
         myConfig : {
                 url: './partials/_submenu.html',
                 button: '#products_cat',
-                target: '.menu-lev-2'
+                target: '.menu-lev-2',
+                stickyheader: '#stickyheader'
             },
         reportGet: function (data) {
                     console.log( data );
@@ -29,12 +30,25 @@ var DisplaySubmenu =
                      event.preventDefault();
 //                   console.log("Prevented on " + event.target.tagName);
                      if ( $( this.myConfig.target ).is( ":hidden" ) ) {
-                             $( this.myConfig.target  ).slideDown( "slow" );
+                             $( this.myConfig.target ).slideDown( "slow" );
                              $("span.arrow").html("▼");
                                 } else {
                                 $( this.myConfig.target ).slideUp( "slow" );
                              $("span.arrow").html("►");
                 }
+         },
+         scrollMenu: function (stickyHeaderTop) {
+            // console.log("Print: " + stickyHeaderTop);
+             if( $(window).scrollTop() > stickyHeaderTop) {
+                        $('#stickyheader').css({position: 'fixed', top: '0px'});
+                        $('#stickysubmenu').css({position: 'fixed', top: '50px'});
+                        $('#stickyalias').css('display', 'block');
+                } else {
+                        $('#stickyheader').css({position: 'static', top: '0px'});
+                        $('#stickysubmenu').css({position: 'static', top: '50px'});
+                        $('#stickyalias').css('display', 'none');
+                }
+                
          }
 
 };
@@ -49,20 +63,13 @@ $(function() {
                );
     });
     
-     var stickyHeaderTop = $('#stickyheader').offset().top;
-      var stickySubmenuTop = $('#stickysubmenu').offset().top;
- 
+     
+         
+        var stickyHeaderTop = $( DisplaySubmenu.myConfig.stickyheader ).offset().top;
         $(window).scroll(function(){
-                if( $(window).scrollTop() > stickyHeaderTop || $(window).scrollTop() > stickySubmenuTop) {
-                        $('#stickyheader').css({position: 'fixed', top: '0px'});
-                        $('#stickysubmenu').css({position: 'fixed', top: '46px'});
-                        $('#stickyalias').css('display', 'block');
-                } else {
-                        $('#stickyheader').css({position: 'static', top: '0px'});
-                        $('#stickysubmenu').css({position: 'static', top: '46px'});
-                        $('#stickyalias').css('display', 'none');
-                }
+            DisplaySubmenu.scrollMenu(stickyHeaderTop);
         });
+      
 //    $(window).resize(function () {
 //                    $(DisplaySubmenu.myConfig.target).hide();
 //            });
