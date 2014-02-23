@@ -51,7 +51,8 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
   overflow: hidden;
   padding: 1em 0;
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 162px; }
 
 #head-content {
   /*    position: fixed;*/
@@ -139,7 +140,7 @@ nav li a {
     color: #712422; }
 
 .social {
-  float: right;
+  margin-top: 20px;
   display: block; }
 
 .social a {
@@ -194,6 +195,7 @@ nav.mobile {
    ===== Main Content ===== 
    =========================== */
 .text_box {
+  margin-top: 10px;
   background-color: #f6ffff;
   overflow: hidden;
   /* container height 100% when contais float elements*/
@@ -394,6 +396,9 @@ footer a:link {
   h3.title {
     font-size: 0.875em; }
 
+  h3.product_name {
+    font-size: 1em; }
+
   .container_12 .grid_3 {
     width: 48.0%; }
   .container_12 .grid_4 {
@@ -426,7 +431,7 @@ footer a:link {
     display: inline-block;
     float: none;
     padding: 0 1em; } }
-@media screen and (max-width: 767px) and (max-width: 251px) {
+@media screen and (max-width: 767px) and (max-width: 274px) {
   h3.product_name {
     font-size: 0.75em; }
 

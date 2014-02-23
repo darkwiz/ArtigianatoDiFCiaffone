@@ -54,9 +54,10 @@ h1, h2, h3, h4, h5, h6 {
 
 #main-content {
     margin: 0 auto;
-   overflow: hidden;
+    overflow: hidden;
     padding: 1em 0;
     width: 100%;
+    margin-bottom: 162px;
 }
  #head-content {
 /*    position: fixed;*/
@@ -156,7 +157,7 @@ nav li a {
 }
 
 .social {
-    float: right;
+    margin-top: 20px; 
     display: block;
 }
 .social a{
@@ -224,6 +225,7 @@ nav.mobile {
 
     
 .text_box {
+    margin-top: 10px;
      background-color: $dirty_white;
      overflow: hidden;  /* container height 100% when contais float elements*/
      max-width: 100%;
@@ -475,6 +477,10 @@ footer a:link {
     h3.title{
         font-size: 0.875em;
     }
+    h3.product_name{
+            font-size: 1em;
+        
+    }
                 .container_12 {
                     
                     .grid_3 {
@@ -523,9 +529,8 @@ footer a:link {
                         padding: 0 1em;
                     }
                     
-@media screen and (max-width:251px){
+@media screen and (max-width:274px){
   h3.product_name{
-        
             font-size: 0.75em;
         
     }
