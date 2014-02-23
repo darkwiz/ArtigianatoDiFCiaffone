@@ -13,12 +13,7 @@ var DisplaySubmenu =
                 button: '#products_cat',
                 target: '.menu-lev-2',
                 stickyheader: '#stickyheader'
-            },
-        reportGet: function (data) {
-                    console.log( data );
-             },
-               
-                
+            },             
          getSubmenu: function () {
               return $.ajax({
 	             url: this.myConfig.url,

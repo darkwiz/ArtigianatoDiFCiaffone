@@ -43,9 +43,9 @@ h6 {
     font-size: 0.875em;     /* 14px */
 }				
 
-h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
-	line-height: 1.1;
+	line-height: 2.2;
 }
 
 
@@ -281,7 +281,7 @@ nav.mobile {
         background-color: $rosso_bordeaux;
         color: $dirty_white;
         height: 2em;
-        line-height:2;
+        line-height:2.2;
         vertical-align:middle;
         
     }
@@ -293,7 +293,7 @@ nav.mobile {
     font-size: 1.5em;
     font-weight: 400;
     text-align: left;
-    padding: 1em 0;
+    padding: .5em 0;
     min-height:100%;
     a { 
         line-height: 2.2;
@@ -302,18 +302,38 @@ nav.mobile {
         color: $gray_1;
         text-decoration: none;
         transition: color 0.2s ease-in-out 0s;
+        &:hover {
+            color: $rosso_bordeaux;
+            border-bottom: 3px solid $rosso_bordeaux;
+     }
     }
     a.active {
         color: $rosso_bordeaux;
-        border-bottom: 3px solid $rosso_bordeaux;
         font-weight: 500;
-        &:hover {
-         color: $dirty_white;
-         border-bottom: 3px solid $dirty_white;
-     }
+        border-bottom: 3px solid $rosso_bordeaux;
+    }   
+}
+
+.product_sheet {
+    max-width: 100%;
+    display: block;
+    background-color: $dirty_white;
+    overflow: hidden; 
+    padding: 1em 0.5em;
+    .description {
+            text-align: left;
+            padding: 0 1em;
     }
-    
-    
+    .text-content {
+        line-height: 2.2;
+        font-weight: 500;
+        margin: 0 0 10px 20px;
+    }
+    .more_info {
+        background-color: $rosso_2;
+        color: $dirty_white;
+        padding: 1em;
+    }
 }
 
 /* ===========================
@@ -428,16 +448,25 @@ footer a:link {
         }
     }
                 .container_12 {
-                    .grid_5 {                   /* trasformazione in un grid_1 push_4 (header)*/
-                       width:14.667%; 
-                       padding-left:8.333%;
-                    }
+                    
                     .grid_3 {
                        width:48.0%;
                     }
                     .grid_4{
                        width:48.0%;
                        }
+                    .product_sheet .grid_4, .grid_5, .grid_7
+                    {
+                        width: 100%;
+                        margin-left: 0;
+                        margin-right: 0;
+
+                    }  
+                    .breadcrumbs, .grid_4 {
+                        width: 100%;
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
                     .grid_2 {
                        width:48.0%;
                     }
@@ -445,6 +474,11 @@ footer a:link {
                        padding-left:33.333%;
                     }
                     .grid_6 {
+                        width: 100%;
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
+                    .grid_8 {
                         width: 100%;
                         margin-left: 0;
                         margin-right: 0;

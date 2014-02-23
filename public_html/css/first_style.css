@@ -40,9 +40,9 @@ h6 {
   font-size: 0.875em;
   /* 14px */ }
 
-h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
-  line-height: 1.1; }
+  line-height: 2.2; }
 
 #main-content {
   margin: 0 auto;
@@ -242,7 +242,7 @@ nav.mobile {
   background-color: #712422;
   color: #f6ffff;
   height: 2em;
-  line-height: 2;
+  line-height: 2.2;
   vertical-align: middle; }
 
 .breadcrums {
@@ -251,7 +251,7 @@ nav.mobile {
   font-size: 1.5em;
   font-weight: 400;
   text-align: left;
-  padding: 1em 0;
+  padding: .5em 0;
   min-height: 100%; }
   .breadcrums a {
     line-height: 2.2;
@@ -260,13 +260,31 @@ nav.mobile {
     color: #7c8184;
     text-decoration: none;
     transition: color 0.2s ease-in-out 0s; }
+    .breadcrums a:hover {
+      color: #712422;
+      border-bottom: 3px solid #712422; }
   .breadcrums a.active {
     color: #712422;
-    border-bottom: 3px solid #712422;
-    font-weight: 500; }
-    .breadcrums a.active:hover {
-      color: #f6ffff;
-      border-bottom: 3px solid #f6ffff; }
+    font-weight: 500;
+    border-bottom: 3px solid #712422; }
+
+.product_sheet {
+  max-width: 100%;
+  display: block;
+  background-color: #f6ffff;
+  overflow: hidden;
+  padding: 1em 0.5em; }
+  .product_sheet .description {
+    text-align: left;
+    padding: 0 1em; }
+  .product_sheet .text-content {
+    line-height: 2.2;
+    font-weight: 500;
+    margin: 0 0 10px 20px; }
+  .product_sheet .more_info {
+    background-color: #a52926;
+    color: #f6ffff;
+    padding: 1em; }
 
 /* ===========================
    ===== 	Footer   ===== 
@@ -349,19 +367,27 @@ footer a:link {
   .contacts h2 {
     font-size: 0.875em; }
 
-  .container_12 .grid_5 {
-    /* trasformazione in un grid_1 push_4 (header)*/
-    width: 14.667%;
-    padding-left: 8.333%; }
   .container_12 .grid_3 {
     width: 48.0%; }
   .container_12 .grid_4 {
     width: 48.0%; }
+  .container_12 .product_sheet .grid_4, .container_12 .grid_5, .container_12 .grid_7 {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0; }
+  .container_12 .breadcrumbs, .container_12 .grid_4 {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0; }
   .container_12 .grid_2 {
     width: 48.0%; }
   .container_12 .prefix_5 {
     padding-left: 33.333%; }
   .container_12 .grid_6 {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0; }
+  .container_12 .grid_8 {
     width: 100%;
     margin-left: 0;
     margin-right: 0; }
