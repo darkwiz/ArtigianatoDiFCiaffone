@@ -8,6 +8,7 @@
 var DisplayProduct =
 {       
         myConfig : {
+                close:'#close',
                 product: '.product_link',
                 target: '.products',
                 selected: undefined
@@ -15,7 +16,7 @@ var DisplayProduct =
          updateMyConfig: function( newConfig ) {
             if ( typeof newConfig === "object" ) {
               this.myConfig = newConfig;
-              console.log(this.myConfig.selected);
+              //console.log(this.myConfig.selected);
             }
           },
          getProduct: function (event) {
@@ -29,12 +30,28 @@ var DisplayProduct =
          showProduct: function (response) {
              if (this.myConfig.selected.parent("div").hasClass("selected")) {
                     this.myConfig.selected.parent(".grid_4").removeClass("selected").animate({opacity: 1});
-                    $(".product_big").slideUp(500).delay(500).remove();
+                    $(".product_big").slideUp( 500, function(){ $(this).remove(); });
                  } else {
-                     $(".product_big").slideUp(500).delay(500).remove();
+                     $(".selected").removeClass("selected").animate({opacity: 1});
+                     $(".product_big").slideUp( 500, function(){ $(this).remove(); });
                      this.myConfig.selected.parent(".grid_4").addClass("selected").animate({opacity: .6});
-                     $(response).prependTo(this.myConfig.target).addClass("product_big").hide().slideDown(500);
+                     $(response).prependTo(this.myConfig.target).addClass("product_big").hide().delay(350).slideDown(500);
+                     DisplayProduct.scrollUp();
                  }
+                $(this.myConfig.close).click( function(event){
+                       DisplayProduct.closeProduct(event);
+                });
+                
+         },
+         closeProduct: function (event) {
+             event.preventDefault();
+             $(".product_big").slideUp( 500, function(){ $(this).remove();});
+             $(".selected").removeClass("selected").animate({opacity: 1});
+         },
+         scrollUp: function() {
+             $('html, body').animate({
+                                    scrollTop: $("#top").offset().top
+                    }, 2000);
          }
 };
 
@@ -42,6 +59,7 @@ var DisplayProduct =
 $(function() {
    $(DisplayProduct.myConfig.product).click( function(event){
        DisplayProduct.updateMyConfig({ 
+                close:'#close',
                 product: '.product_link',
                 target: '.products',
                 selected: $(this) });
@@ -53,8 +71,9 @@ $(function() {
                .fail( function () {
                     alert("Non ancora disponibile");
                     return false;
-               });
+               }); 
         });
+     
    });
    
    

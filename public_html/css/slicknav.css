@@ -98,3 +98,7 @@
 .slicknav_nav .slicknav_txtnode {
      margin-left:15px;   
 }
+
+.slicknav_nav li.active a {
+    color: #A52926;
+}

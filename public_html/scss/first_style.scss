@@ -6,6 +6,8 @@
    =========================== */
 
 html, body {
+    margin:0;
+    padding:0;
     height: 100%;
 }
    
@@ -15,6 +17,7 @@ body {
 	font-family: $font-stack;
 	text-align: center;
         min-width: 240px;
+        min-height: 100%;
 }
 	
 	
@@ -51,7 +54,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #main-content {
     margin: 0 auto;
-    overflow: hidden;
+   overflow: hidden;
     padding: 1em 0;
     width: 100%;
 }
@@ -63,7 +66,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     z-index: 1000;
     background-color: $dirty_white;
-    @include box-shadow(0, 5px, 5px, rgba(0, 0, 0, 0.2));
+    @include box-shadow(0, 5px, 3px, 0px rgba(0, 0, 0, 0.2));
 }
 
  #footer-content {
@@ -106,7 +109,7 @@ header {
 
 .the-logo {
     background: none repeat scroll 0 0 $dirty_white;
-    margin: 0 0 10px;
+    margin: 0 0 8px;
     padding: 5px;
     text-align: center;
     img {
@@ -117,7 +120,9 @@ header {
 }
 
 nav {
-    max-width: 100%;
+    width: 100%;
+    max-height: 100%;
+    @include box-shadow(0, 5px, 3px, 0px rgba(0, 0, 0, 0.2));
 }
 
 
@@ -175,7 +180,7 @@ nav li a {
     max-width: 100%;
 }
     
-  .slicknav_menu{
+.slicknav_menu{
 	display: none;
 }
 
@@ -301,19 +306,24 @@ nav.mobile {
         padding-bottom: 4px;
         color: $gray_1;
         text-decoration: none;
-        transition: color 0.2s ease-in-out 0s;
-        &:hover {
-            color: $rosso_bordeaux;
-            border-bottom: 3px solid $rosso_bordeaux;
-     }
     }
     a.active {
         color: $rosso_bordeaux;
         font-weight: 500;
-        border-bottom: 3px solid $rosso_bordeaux;
+        border-bottom: 3px solid  $rosso_bordeaux;
     }   
 }
 
+    #close {
+        cursor: pointer;
+        line-height: 2.2;
+        font-size: 1.5em;
+        margin: 0 9px;
+        padding-bottom: 4px;
+        color: $gray_1;
+        text-decoration: underline;
+        float: right;
+    }
 .product_sheet {
     max-width: 100%;
     display: block;
@@ -341,8 +351,8 @@ nav.mobile {
    =========================== */
 
 .wrapper {
+        height: auto !important;
 	min-height: 100%;
-	height: auto !important;
 	height: 100%;
 	margin: 0 auto -4em; /* the bottom margin is the negative value of the footer's height */
 }
@@ -394,8 +404,23 @@ footer a:link {
 
 @media screen and (max-width:1279px) {
 
+       .contacts {
+        p{
+            padding: .4em;
+            font-size: .875em;
+        }
+        h3 {
+            font-size: 1em;
+        }
+        h2 {
+            font-size: 1.25em;
+        }
+    }
+    
+     h3.title{
+        font-size: 1em;
+    }
    
-    //Insert code here (no body font:75%) just single elements 
 }	
 
 /*  Display sotto i768 px (Smartphone) */
@@ -435,7 +460,6 @@ footer a:link {
     
 
     .contacts {
-       
         p{
             padding: .4em;
             font-size: 0.75em;
@@ -446,6 +470,10 @@ footer a:link {
         h2 {
             font-size: 0.875em;
         }
+    }
+    
+    h3.title{
+        font-size: 0.875em;
     }
                 .container_12 {
                     
@@ -462,17 +490,16 @@ footer a:link {
                         margin-right: 0;
 
                     }  
-                    .breadcrumbs, .grid_4 {
+                    .breadcrumbs, .grid_7 {
                         width: 100%;
                         margin-left: 0;
                         margin-right: 0;
+                        font-size: 1em;
                     }
                     .grid_2 {
                        width:48.0%;
                     }
-                    .prefix_5 {
-                       padding-left:33.333%;
-                    }
+                    
                     .grid_6 {
                         width: 100%;
                         margin-left: 0;
@@ -483,6 +510,12 @@ footer a:link {
                         margin-left: 0;
                         margin-right: 0;
                     }
+                    .prefix_5 {
+                       padding-left:33.333%;
+                    }
+                    grid_7, .prefix_8 {
+                            padding-left: 0; 
+                        }
                 }
                 .social {
                         display: inline-block;
@@ -491,16 +524,30 @@ footer a:link {
                     }
                     
 @media screen and (max-width:251px){
-    .contacts{
-        p{
-            font-size: 0.5em;
+  h3.product_name{
+        
+            font-size: 0.75em;
+        
+    }
+    h3.title{
+        font-size: 0.75em;
+    }
+        .contacts{
+            p{
+                font-size: 0.5em;
+            }
+             h3 {
+                font-size: 0.5em;
+            }
+            h2 {
+                font-size: 0.5em;
+            }
         }
-         h3 {
-            font-size: 0.5em;
-        }
-        h2 {
-            font-size: 0.5em;
+        
+        .container_12 {
+            .breadcrumbs, .grid_7 {
+                font-size: 0.75em;
+            }
         }
     }
-}
 }

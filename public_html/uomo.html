@@ -5,16 +5,16 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html>
-    <head>
+     <head>
          <meta charset="UTF-8">
-        <title>Artigianato di F. Ciaffone - Home</title>
+        <title>Artigianato di F. Ciaffone - Accessori Uomo</title>
        
         
         <meta name="description" content="Artigianato di F. Ciaffone Heartmade with Leather">
         <meta name="keywords" content="Artigianato di F. Ciaffone, ecc.">
 
         
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <link rel="stylesheet" href="css/html5reset.css" type="text/css">
         <link rel="stylesheet" href="css/fluid_grid.css" type="text/css">
@@ -35,13 +35,13 @@ and open the template in the editor.
           <div class="hidden-container">
                 <nav class="mobile">
                         <ul id="menu">
-                             <li class="active"><a href="index.html">Home</a></li>
+                             <li><a href="index.html">Home</a></li>
                              <li><a href="chi_siamo.html">Chi Siamo</a></li>
                              <li ><a href="contatti.html">Contatti</a></li>
                              <li>
-                                 <a href="prodotti.html">Prodotti</a>
+                                 <a href="varie.html" class="active">Prodotti</a>
                               <ul>
-                                   <li><a href="uomo.html">Accessori Uomo</a></li>
+                                    <li><a href="uomo.html">Accessori Uomo</a></li>
                                     <li><a href="donna.html">Accessori Donna</a></li>
                                     <li><a href="fumo.html">Articoli per Fumatori</a></li>
                                     <li><a href="varie.html">Varie</a></li>
@@ -55,7 +55,7 @@ and open the template in the editor.
            <div class="grid_12">
              <header>
                  <h1 class="the-logo" title="The Logo">
-                    <a class="ajax" href="/"><img alt="Logo" src="img/logo.png"></a>
+                    <a href="/"><img alt="Logo" src="img/logo.png"></a>
                  </h1>
               </header>           
            </div>
@@ -64,85 +64,77 @@ and open the template in the editor.
              <div id="stickyheader">
                     <nav id="navbar_primary">
                         <ul>
-                             <li class="active"><a href="index.html">Home</a></li>
+                             <li><a href="index.html">Home</a></li>
                              <li><a href="chi_siamo.html">Chi Siamo</a></li>
                              <li ><a href="contatti.html">Contatti</a></li>
-                             <li id="products_cat">
+                             <li id="products_cat" class="active">
                                  <a href="#">Prodotti <span class="arrow">►</span></a></li>
                          </ul>
                      </nav>
         </div>
         <div id="stickyalias"></div>
-        
         </div>
-          
-          <div class="submenu" id="stickysubmenu">
+         <div class="submenu" id="stickysubmenu">
                  <div class="menu-lev-2"></div>
              </div>
           <div id="stickyalias"></div>
           <div id="mobile_menu">
           </div>
-       
-          <div id="main-content"> 
-              
+          <div id="main-content">
               <div class="container_12">
-                  <div class="grid_12">
-                  <div class="flexslider">		
-                                  <ul class="slides">
-                                    <li>
-                                      <img src="img/img1.jpeg" />
-                                    </li>
-                                    <li>
-                                      <img src="img/img2.jpeg" />
-                                    </li>
-                                    <li>
-                                      <img src="img/img3.jpeg" />
-                                    </li>
-                                    <li>
-                                      <img src="img/img4.jpeg" />
-                                    </li>
-                                  </ul>
-				</div>
-	
-              </div>
-              </div>
-              <div class="clear"></div>
-               <div class="container_12">
-                   <div class="categories">
-                    <div class="grid_3">
-                        <a href="uomo.html">
-                          <h3 class="title">Accessori Uomo</h3>
-                             <span><img src="img/prodotti/cinta_uomo.jpg" alt="Accessorio Uomo" /></span>
+                  <div class="breadcrums grid_7" id="top">
+                  <a>Prodotti</a> /
+                  <a class="active"> Accessori Uomo</a>
+                  </div>
+                  <div class="clear"></div>
+                  <div class="products grid_12">
+                    
+                       <div class="grid_4">
+                        <a href="partials/product_1.html" class="product_link">
+                                    <span><img src="img/prodotti/400x400.png" alt="Prodotto 1" /></span>
+                                    <h3 class="product_name">Prodotto 1</h3>
                          </a>
                      </div>
-                          
-                       
-                    <div class="grid_3">
-                        <a href="donna.html">
-                          <h3 class="title">Accessori Donna</h3>                      
-                                    <span><img src="img/prodotti/gufo_donna.jpg" alt="Accessorio Donna" /></span>
+                    <div class="grid_4">
+                        <a href="partials/_product2-html" class="product_link">
+                                    <span><img src="img/prodotti/400x400.png" alt="Prodotto 2" /></span>
+                                    <h3 class="product_name">Prodotto 2</h3>      
                           </a>
                      </div>
-                   <div class="grid_3">
-                        <a href="fumo.html">
-                          <h3 class="title">Articoli per Fumatori</h3>
-                                    <span><img src="img/prodotti/fumo.jpg" alt="Accessori per Fumatori"/></span>
+                   <div class="grid_4">
+                        <a href="partials/prodotto_3.html"  class="product_link">
+                                    <span><img src="img/prodotti/400x400.png" alt="Prodotto 3"/></span>
+                                    <h3 class="product_name">Prodotto 3</h3> 
                         </a>
                      </div>
-                   <div class="grid_3">
-                       <a href="varie.html">
-                          <h3 class="title">Varie</h3>
-                                <span><img src="img/prodotti/varie.jpg" alt="Varie" /></span>
-                      </a>
-                    </div>
+                     <div class="grid_4">
+                        <a href="partials/prodotto_4.html"  class="product_link">
+                                    <span><img src="img/prodotti/400x400.png" alt="Prodotto 4" /></span>
+                                    <h3 class="product_name">Prodotto 4</h3>
+                         </a>
+                     </div>
+                    <div class="grid_4">
+                        <a href="partials/prodotto_5.html"  class="product_link">
+                                    <span><img src="img/prodotti/400x400.png" alt="Prodotto 5" /></span>
+                                    <h3 class="product_name">Prodotto 5</h3>      
+                          </a>
+                     </div>
+                   <div class="grid_4">
+                        <a href="partials/prodotto_6.html"  class="product_link">
+                                    <span><img src="img/prodotti/400x400.png" alt="Prodotto 6"/></span>
+                                    <h3 class="product_name">Prodotto 6</h3> 
+                        </a>
+                     </div>
                  </div>
             </div>
               
+           
         </div>
-          
-         <div class="push"></div>
-         </div>
-         <div id="footer-content">
+          <div class="push"></div>   
+        </div>
+         
+   
+     <div id="footer-content">
       <div class="container_12">
         <footer class="grid_12">
             <p>Creted by <strong>Matteo Gentile</strong> with 960.gs fluid grid</p>
@@ -150,8 +142,7 @@ and open the template in the editor.
         </footer>
       </div>
     </div>
-      
-    
+
     </body>
     
 <script src="js/libs/jquery-1.11.0.min.js"></script>
@@ -162,4 +153,6 @@ and open the template in the editor.
 <script src="js/libs/jquery.slicknav.min.js"></script>
 <script src="js/slide.js" ></script>
 <script src="js/menu.js" ></script>
+<script src="js/products.js" ></script>
+
 </html>
