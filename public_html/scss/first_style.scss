@@ -16,8 +16,6 @@ body {
 	color: $gray_1;
 	font-family: $font-stack;
 	text-align: center;
-        min-width: 240px;
-        min-height: 100%;
 }
 	
 	
@@ -57,10 +55,9 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
     padding: 1em 0;
     width: 100%;
-    margin-bottom: 162px;
+    margin-bottom: 130px;
 }
  #head-content {
-/*    position: fixed;*/
     overflow: hidden;
     height: 160px;
     top: 0;
@@ -157,20 +154,30 @@ nav li a {
 }
 
 .social {
-    margin-top: 20px; 
-    display: block;
-}
-.social a{
+    position: absolute;
+    top:0;
+    right: 0;
+    z-index: 1007;
+    margin: .28em .28em 0 0;
+    span{
+        text-align:center;
+        display: block;
+        padding: 1px;
+    }
+    img.social_icon{
+      vertical-align: middle;
+      margin: 0;
+    }
+    a{
      text-decoration: none;
+}
 }
 
 .submenu {
-/*  top: 160px;
-    position: fixed;*/
     width: 100%;
     z-index: 1000;
     nav ul {
-         background-color: rgba(215, 226, 228, 0.6);         /* $gray_light */ 
+         background-color: rgba(215, 226, 228, 0.6);
     }
 }
 
@@ -225,9 +232,9 @@ nav.mobile {
 
     
 .text_box {
-    margin-top: 10px;
+     margin-top: 10px;
      background-color: $dirty_white;
-     overflow: hidden;  /* container height 100% when contais float elements*/
+     overflow: hidden;  
      max-width: 100%;
      @include box-shadow(0, 5px, 5px, rgba(0, 0, 0, 0.2));
      p {
@@ -316,7 +323,7 @@ nav.mobile {
     }   
 }
 
-    #close {
+#close {
         cursor: pointer;
         line-height: 2.2;
         font-size: 1.5em;
@@ -326,6 +333,7 @@ nav.mobile {
         text-decoration: underline;
         float: right;
     }
+    
 .product_sheet {
     max-width: 100%;
     display: block;
@@ -405,8 +413,8 @@ footer a:link {
 /* Display sotto i 1279 px (Tablet) */
 
 @media screen and (max-width:1279px) {
-
-       .contacts {
+    
+     .contacts {
         p{
             padding: .4em;
             font-size: .875em;
@@ -425,11 +433,11 @@ footer a:link {
    
 }	
 
-/*  Display sotto i768 px (Smartphone) */
+/*  Display sotto i 768 px (Smartphone) */
 
 @media screen and (max-width:767px){
     
-     #head-content{
+    #head-content{
         height: 100px;
         position: relative;
         @include box-shadow(0,0,0,0)
@@ -476,6 +484,8 @@ footer a:link {
     
     h3.title{
         font-size: 0.875em;
+        line-height: 1.1;
+        
     }
     h3.product_name{
             font-size: 1em;
@@ -522,37 +532,46 @@ footer a:link {
                     grid_7, .prefix_8 {
                             padding-left: 0; 
                         }
+                    .grid_12
+                        {
+                        width: 100%;
+                        margin-left: 0;
+                        margin-right: 0;
+                         }    
+                         
+                   
+    .social, .grid_1
+    {
+        width:14.667%; 
+    }
+                     
                 }
-                .social {
-                        display: inline-block;
-                        float: none;
-                        padding: 0 1em;
-                    }
+                
+/* Dispositivi Bassisima risoluzione */               
                     
 @media screen and (max-width:274px){
-  h3.product_name{
+    h3.product_name{
             font-size: 0.75em;
-        
     }
     h3.title{
         font-size: 0.75em;
+        line-height: 1.1;
     }
-        .contacts{
-            p{
-                font-size: 0.5em;
-            }
-             h3 {
-                font-size: 0.5em;
-            }
-            h2 {
-                font-size: 0.5em;
-            }
+    .contacts{
+        p{
+            font-size: 0.5em;
         }
-        
-        .container_12 {
-            .breadcrumbs, .grid_7 {
+         h3 {
+            font-size: 0.5em;
+        }
+        h2 {
+            font-size: 0.5em;
+        }
+    }
+    .container_12 {
+        .breadcrumbs, .grid_7 {
                 font-size: 0.75em;
-            }
+            }       
         }
     }
 }

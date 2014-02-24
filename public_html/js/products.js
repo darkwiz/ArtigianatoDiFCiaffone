@@ -16,7 +16,6 @@ var DisplayProduct =
          updateMyConfig: function( newConfig ) {
             if ( typeof newConfig === "object" ) {
               this.myConfig = newConfig;
-              //console.log(this.myConfig.selected);
             }
           },
          getProduct: function (event) {

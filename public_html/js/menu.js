@@ -33,7 +33,6 @@ var DisplaySubmenu =
                 }
          },
          scrollMenu: function (stickyHeaderTop) {
-            // console.log("Print: " + stickyHeaderTop);
              if( $(window).scrollTop() > stickyHeaderTop) {
                         $('#stickyheader').css({position: 'fixed', top: '0px'});
                         $('#stickysubmenu').css({position: 'fixed', top: '50px'});
@@ -57,16 +56,9 @@ $(function() {
                    DisplaySubmenu.showSubmenu(event);}
                );
     });
-    
-     
-         
         var stickyHeaderTop = $( DisplaySubmenu.myConfig.stickyheader ).offset().top;
         $(window).scroll(function(){
             DisplaySubmenu.scrollMenu(stickyHeaderTop);
         });
-      
-//    $(window).resize(function () {
-//                    $(DisplaySubmenu.myConfig.target).hide();
-//            });
 });
 

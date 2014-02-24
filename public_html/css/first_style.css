@@ -11,9 +11,7 @@ body {
   background-color: #d7e2e4;
   color: #7c8184;
   font-family: Helvetica, Verdana, Arial, sans-serif;
-  text-align: center;
-  min-width: 240px;
-  min-height: 100%; }
+  text-align: center; }
 
 /* ===========================
    ========= Headings ======== 
@@ -52,10 +50,9 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   padding: 1em 0;
   width: 100%;
-  margin-bottom: 162px; }
+  margin-bottom: 130px; }
 
 #head-content {
-  /*    position: fixed;*/
   overflow: hidden;
   height: 160px;
   top: 0;
@@ -140,20 +137,26 @@ nav li a {
     color: #712422; }
 
 .social {
-  margin-top: 20px;
-  display: block; }
-
-.social a {
-  text-decoration: none; }
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1007;
+  margin: .28em .28em 0 0; }
+  .social span {
+    text-align: center;
+    display: block;
+    padding: 1px; }
+  .social img.social_icon {
+    vertical-align: middle;
+    margin: 0; }
+  .social a {
+    text-decoration: none; }
 
 .submenu {
-  /*  top: 160px;
-      position: fixed;*/
   width: 100%;
   z-index: 1000; }
   .submenu nav ul {
-    background-color: rgba(215, 226, 228, 0.6);
-    /* $gray_light */ }
+    background-color: rgba(215, 226, 228, 0.6); }
 
 .menu-lev-2 {
   margin: 0 auto;
@@ -198,7 +201,6 @@ nav.mobile {
   margin-top: 10px;
   background-color: #f6ffff;
   overflow: hidden;
-  /* container height 100% when contais float elements*/
   max-width: 100%;
   -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
@@ -356,7 +358,7 @@ footer a:link {
 
   h3.title {
     font-size: 1em; } }
-/*  Display sotto i768 px (Smartphone) */
+/*  Display sotto i 768 px (Smartphone) */
 @media screen and (max-width: 767px) {
   #head-content {
     height: 100px;
@@ -394,7 +396,8 @@ footer a:link {
     font-size: 0.875em; }
 
   h3.title {
-    font-size: 0.875em; }
+    font-size: 0.875em;
+    line-height: 1.1; }
 
   h3.product_name {
     font-size: 1em; }
@@ -426,17 +429,21 @@ footer a:link {
     padding-left: 33.333%; }
   .container_12 grid_7, .container_12 .prefix_8 {
     padding-left: 0; }
+  .container_12 .grid_12 {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0; }
+  .container_12 .social, .container_12 .grid_1 {
+    width: 14.667%; }
 
-  .social {
-    display: inline-block;
-    float: none;
-    padding: 0 1em; } }
+  /* Dispositivi Bassisima risoluzione */ }
 @media screen and (max-width: 767px) and (max-width: 274px) {
   h3.product_name {
     font-size: 0.75em; }
 
   h3.title {
-    font-size: 0.75em; }
+    font-size: 0.75em;
+    line-height: 1.1; }
 
   .contacts p {
     font-size: 0.5em; }
