@@ -41,7 +41,7 @@ h5 {
     font-size: 1em;     /* 16px */
 }	
 h6 {
-    font-size: 0.875em;     /* 14px */
+    font-size: 0.875em; /* 14px */
 }				
 
 h1, h2, h3, h4, h5, h6 {
@@ -138,6 +138,7 @@ nav li {
 
 nav li.active a {
     color: $rosso_bordeaux;
+    font-weight: bold;
 }
 
 nav li a {
@@ -209,8 +210,6 @@ nav li a {
           }
 
 
-/* Menù mobile*/
-
 .hidden-container {
     margin: 0 auto;
     position: relative;
@@ -227,7 +226,7 @@ nav.mobile {
 }
 
 /* ===========================
-   ===== Main Content ===== 
+   ===== Main Content    ===== 
    =========================== */
 
     
@@ -301,7 +300,7 @@ nav.mobile {
     }
 } 
 
-.breadcrums {
+.breadcrumbs {
     display: block;
     float: left;
     font-size: 1.5em;
@@ -322,17 +321,10 @@ nav.mobile {
         border-bottom: 3px solid  $rosso_bordeaux;
     }   
 }
-
-#close {
-        cursor: pointer;
-        line-height: 2.2;
-        font-size: 1.5em;
-        margin: 0 9px;
-        padding-bottom: 4px;
-        color: $gray_1;
-        text-decoration: underline;
-        float: right;
-    }
+    
+  /*===========================
+   =====  Scheda Prodotti  ==== 
+   =========================== */
     
 .product_sheet {
     max-width: 100%;
@@ -356,8 +348,19 @@ nav.mobile {
     }
 }
 
+#close {
+        cursor: pointer;
+        line-height: 2.2;
+        font-size: 1.5em;
+        margin: 0 9px;
+        padding-bottom: 4px;
+        color: $gray_1;
+        text-decoration: underline;
+        float: right;
+    }
+    
 /* ===========================
-   ===== 	Footer   ===== 
+   =====      Footer     ===== 
    =========================== */
 
 .wrapper {
@@ -538,17 +541,12 @@ footer a:link {
                         margin-left: 0;
                         margin-right: 0;
                          }    
-                         
-                   
-    .social, .grid_1
-    {
-        width:14.667%; 
-    }
-                     
-                }
-                
-/* Dispositivi Bassisima risoluzione */               
-                    
+                        .social, .grid_1
+                        {
+                            width:14.667%; 
+                        }
+}
+}
 @media screen and (max-width:274px){
     h3.product_name{
             font-size: 0.75em;
@@ -568,10 +566,17 @@ footer a:link {
             font-size: 0.5em;
         }
     }
+    .text_box p{
+        padding: 0;
+        overflow: visible;
+        
+    }
     .container_12 {
         .breadcrumbs, .grid_7 {
                 font-size: 0.75em;
+                a{
+                    margin: 0;
+                }
             }       
         }
-    }
-}
+}  
