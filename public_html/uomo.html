@@ -7,7 +7,7 @@ and open the template in the editor.
 <html>
      <head>
          <meta charset="UTF-8">
-        <title>Artigianato di F. Ciaffone - Accessori Uomo</title>
+        <title>Artigianato di F. Ciaffone - Prodotti -Accessori Uomo</title>
        
         
         <meta name="description" content="Artigianato di F. Ciaffone Heartmade with Leather">
@@ -34,24 +34,6 @@ and open the template in the editor.
     </head>
     <body>
       <div class="wrapper">
-          <div class="hidden-container">
-                <nav class="mobile">
-                        <ul id="menu">
-                             <li><a href="index.html">Home</a></li>
-                             <li><a href="chi_siamo.html">Chi Siamo</a></li>
-                             <li ><a href="contatti.html">Contatti</a></li>
-                             <li>
-                                 <a href="varie.html" class="active">Prodotti</a>
-                              <ul>
-                                    <li><a href="uomo.html">Accessori Uomo</a></li>
-                                    <li><a href="donna.html">Accessori Donna</a></li>
-                                    <li><a href="fumo.html">Accessori per Fumatori</a></li>
-                                    <li><a href="varie.html">Varie</a></li>
-                              </ul>
-                             </li>
-                         </ul>
-                </nav>
-            </div>
         <div id="head-content">
           <div class="container_12">
            <div class="grid_12">
@@ -75,30 +57,40 @@ and open the template in the editor.
            </div>
                <div class="clear"></div>
           </div>
-             <div id="stickyheader">
                     <nav id="navbar_primary">
-                        <ul>
+                        <ul id="menu">
                              <li><a href="index.html">Home</a></li>
                              <li><a href="chi_siamo.html">Chi Siamo</a></li>
                              <li ><a href="contatti.html">Contatti</a></li>
-                             <li id="products_cat" class="active">
-                                 <a href="#">Prodotti <span class="arrow">►</span></a></li>
+                             <li class="active">
+                                 <a href="prodotti.html">Prodotti</a></li>
                          </ul>
                      </nav>
         </div>
-        <div id="stickyalias"></div>
-        </div>
-         <div class="submenu" id="stickysubmenu">
-                 <div class="menu-lev-2"></div>
-             </div>
-          <div id="stickyalias"></div>
+       
           <div id="mobile_menu">
           </div>
           <div id="main-content">
               <div class="container_12">
-                  <div class="breadcrumbs grid_7" id="top">
+                 <div class="breadcrumbs grid_7" id="top">
                   <a>Prodotti</a> /
-                  <a class="active"> Accessori Uomo</a>
+                  <a class="active">Accessori Uomo</a>
+                  </div>
+                  <div class="grid_5">
+                      <div class="grid_12 select_container ">
+                      <div class="grid_6">
+                      <h3>Scegli una categoria:</h3>
+                      </div>
+                      <div class="grid_6" id="select">
+                      <select onchange="location = this.options[this.selectedIndex].value;">
+                            <option value="prodotti.html">Tutte le categorie</option>
+                            <option value="uomo.html" selected="selected">Accessori Uomo</option>
+                            <option value="donna.html">Accessori Donna</option>
+                            <option value="fumatori.html">Accessori per fumatori</option>
+                            <option value="varie.html">Varie</option>
+                      </select>
+                      </div>
+                  </div>
                   </div>
                   <div class="clear"></div>
                   <div class="products grid_12">

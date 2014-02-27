@@ -55,12 +55,9 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
     padding: 1em 0;
     width: 100%;
-    margin-bottom: 130px;
 }
  #head-content {
     overflow: hidden;
-    height: 160px;
-    top: 0;
     width: 100%;
     z-index: 1000;
     background-color: $dirty_white;
@@ -174,51 +171,8 @@ nav li a {
 }
 }
 
-.submenu {
-    width: 100%;
-    z-index: 1000;
-    nav ul {
-         background-color: rgba(215, 226, 228, 0.6);
-    }
-}
-
-.menu-lev-2 {
-    margin: 0 auto;
-    background-color: $gray_1;
-    display: none;
-    max-width: 100%;
-}
-    
 .slicknav_menu{
 	display: none;
-}
-
-#stickyheader, #stickysubmenu {
-            left: 0;
-            width: 100%;
-            height: 50px;
-            z-index: 1004;
-            }
-
-#stickyalias {
-          display: none;
-          height: 10px;
-          }
-          
-.arrow {
-    display: inline;
-          }
-
-
-.hidden-container {
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
-}
-nav.mobile {
-    display: none;
-    height: 0;
-    visibility: hidden;
 }
 
 #mobile_menu{
@@ -229,7 +183,32 @@ nav.mobile {
    ===== Main Content    ===== 
    =========================== */
 
-    
+select {
+    border: 1px solid $gray_1;
+    border-radius: 5px;
+    color: $rosso_bordeaux;
+    padding: 0.75em;
+    vertical-align: middle;
+    width: 100%;
+    max-height:44px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: $dirty_white;
+    background-transparency: 0.5;
+}
+select:active {
+    border: 1px solid $gray_1;
+}
+
+.select_container {
+    h3{
+       font-size: 1.25em;
+       font-weight: 400;
+    }
+    min-height: 100%;
+    padding: 0.5em 0;
+    text-align: right;
+}
 .text_box {
      margin-top: 10px;
      background-color: $dirty_white;
@@ -306,7 +285,6 @@ nav.mobile {
     font-size: 1.5em;
     font-weight: 400;
     text-align: left;
-    padding: .5em 0;
     min-height:100%;
     a { 
         line-height: 2.2;
@@ -446,11 +424,7 @@ footer a:link {
         @include box-shadow(0,0,0,0)
     }
     
-    #main-content{
-        margin-top: 3em;
-        padding-top: 0;
-    }
-    
+  
     #menu {
         display:none;
 	}
@@ -463,13 +437,6 @@ footer a:link {
          display:block;
          width: 100%;
      }
-
-    .menu-lev-2, .submenu {
-        display: none;
-    }
-    #stickyheader {
-        display: none;
-    }
     
 
     .contacts {
