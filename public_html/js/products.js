@@ -37,7 +37,7 @@ var DisplayProduct =
                      $(response).prependTo(this.myConfig.target).addClass("product_big").hide().delay(350).slideDown(500);
                      DisplayProduct.scrollUp();
                  }
-                $(this.myConfig.close).click( function(event){
+                $("#close").click( function(event){
                        DisplayProduct.closeProduct(event);
                 });
                 

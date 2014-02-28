@@ -61,7 +61,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     z-index: 1000;
     background-color: $dirty_white;
-    @include box-shadow(0, 5px, 3px, 0px rgba(0, 0, 0, 0.2));
+    @include box-shadow(0, 3px, 3px, 0px rgba(0, 0, 0, 0.2));
 }
 
  #footer-content {
@@ -117,7 +117,6 @@ header {
 nav {
     width: 100%;
     max-height: 100%;
-    @include box-shadow(0, 5px, 3px, 0px rgba(0, 0, 0, 0.2));
 }
 
 
@@ -131,6 +130,8 @@ nav ul{
 
 nav li {
     display:inline-block; 
+    width: 9%;
+    min-width: 150px;
 }
 
 nav li.active a {
@@ -146,7 +147,8 @@ nav li a {
     color: $gray_1;
     transition: color 0.3s linear 0s;
     &:hover {
-        color: $rosso_bordeaux; 
+        color: $rosso_bordeaux;
+        font-weight: bold;
     }
       
 }
@@ -203,10 +205,11 @@ select:active {
 .select_container {
     h3{
        font-size: 1.25em;
-       font-weight: 400;
+       font-weight: 500;
+       vertical-align: middle;
     }
     min-height: 100%;
-    padding: 0.5em 0;
+    padding: 0.75em 0;
     text-align: right;
 }
 .text_box {
@@ -217,9 +220,8 @@ select:active {
      @include box-shadow(0, 5px, 5px, rgba(0, 0, 0, 0.2));
      p {
         padding: 2%;
-        text-align: left;
-        font-size: 100%;
-        overflow: hidden;
+        text-align: justify;
+        line-height: 1.5;
      }
     }
     
@@ -259,10 +261,6 @@ select:active {
 }
 
 .products {
-     div{
-        margin-top: 1em ;
-        margin-bottom: 1em ;
-         }
       span{
         display: block;
         padding: 1em 0;
@@ -277,26 +275,23 @@ select:active {
         vertical-align:middle;
         
     }
+    .p_box{
+        margin-top: 0.75em ;
+        margin-bottom: 0.75em;
+    }
 } 
 
-.breadcrumbs {
-    display: block;
-    float: left;
-    font-size: 1.5em;
-    font-weight: 400;
+.category_title {
+    font-size: 2em;
+    font-weight: 500;
     text-align: left;
-    min-height:100%;
     a { 
         line-height: 2.2;
-        margin: 0 9px;
-        padding-bottom: 4px;
         color: $gray_1;
         text-decoration: none;
     }
     a.active {
         color: $rosso_bordeaux;
-        font-weight: 500;
-        border-bottom: 3px solid  $rosso_bordeaux;
     }   
 }
     
@@ -315,14 +310,17 @@ select:active {
             padding: 0 1em;
     }
     .text-content {
-        line-height: 2.2;
+        line-height: 1.5;
         font-weight: 500;
-        margin: 0 0 10px 20px;
+        margin: 0 0 10px 15px;
+    }
+    h3{
+        line-height: 1.5;
     }
     .more_info {
-        background-color: $rosso_2;
-        color: $dirty_white;
-        padding: 1em;
+        padding: 1%;
+        text-align: justify;
+        line-height: 1.5;
     }
 }
 
@@ -370,23 +368,24 @@ footer a:link {
    =====     Contacts    ===== 
    =========================== */
 
-.contacts {
-    text-align: left;
-    font-size: 200%;
-    padding: 1em 0.5em;
-    img{
-         float: none;
-         margin: 20px auto 20px;
-         position: relative;
-         display: block;
-    }
+#contacts_info {
+    font-size: 1.5em;
+    margin: 20px 0;
     p{
-        padding: .6em;
+        padding: 1%;
+        text-align: left;
+    }
+    h2, h3{
+        line-height: 1.5;
+        text-align: left;
     }
 }
 
-
-
+#contacts_pic {
+    float: none;
+     margin: 20px 0;
+     display: block;
+}
 /* ===========================
    =====    Media Query ===== 
    =========================== */
@@ -394,7 +393,12 @@ footer a:link {
 /* Display sotto i 1279 px (Tablet) */
 
 @media screen and (max-width:1279px) {
-    
+    .select_container{
+        h3{
+            padding: .25em 0;
+            font-size: 1em;
+        }
+    }
      .contacts {
         p{
             padding: .4em;
@@ -421,16 +425,16 @@ footer a:link {
     #head-content{
         height: 100px;
         position: relative;
-        @include box-shadow(0,0,0,0)
+        @include box-shadow(0,0,0,0);
     }
     
-  
     #menu {
         display:none;
 	}
         
     #mobile_menu{
         display: block;
+        @include box-shadow(0, 3px, 3px, 0px rgba(0, 0, 0, 0.2));
     }
         
     .slicknav_menu {
@@ -438,7 +442,6 @@ footer a:link {
          width: 100%;
      }
     
-
     .contacts {
         p{
             padding: .4em;
@@ -451,7 +454,6 @@ footer a:link {
             font-size: 0.875em;
         }
     }
-    
     h3.title{
         font-size: 0.875em;
         line-height: 1.1;
@@ -460,6 +462,12 @@ footer a:link {
     h3.product_name{
             font-size: 1em;
         
+    }
+    .category_title {
+        font-size: 1.5em;
+    }
+    .select_container{
+        text-align: left;
     }
                 .container_12 {
                     
@@ -474,14 +482,8 @@ footer a:link {
                         width: 100%;
                         margin-left: 0;
                         margin-right: 0;
-
                     }  
-                    .breadcrumbs, .grid_7 {
-                        width: 100%;
-                        margin-left: 0;
-                        margin-right: 0;
-                        font-size: 0.875em;
-                    }
+                    
                     .grid_2 {
                        width:48.0%;
                     }
@@ -508,10 +510,10 @@ footer a:link {
                         margin-left: 0;
                         margin-right: 0;
                          }    
-                        .social, .grid_1
+                    .social, .grid_1
                         {
-                            width:14.667%; 
-                        }
+                         width:14.667%; 
+                        }    
 }
 }
 @media screen and (max-width:274px){
@@ -538,12 +540,4 @@ footer a:link {
         overflow: visible;
         
     }
-    .container_12 {
-        .breadcrumbs, .grid_7 {
-                font-size: 0.75em;
-                a{
-                    margin: 0;
-                }
-            }       
-        }
 }  
