@@ -50,7 +50,7 @@ var DisplayProduct =
          scrollUp: function() {
              $('html, body').animate({
                                     scrollTop: $("#top").offset().top
-                    }, 2000);
+                    }, 1500);
          }
 };
 
