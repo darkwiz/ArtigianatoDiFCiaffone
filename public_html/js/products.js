@@ -7,11 +7,13 @@
 
 var DisplayProduct =
 {       
+        mySelect: undefined,
+
         myConfig : {
                 close:'#close',
                 product: '.product_link',
                 target: '.products',
-                selected: undefined
+                big: ".product_big"
          },  
          updateMyConfig: function( newConfig ) {
             if ( typeof newConfig === "object" ) {
@@ -21,30 +23,31 @@ var DisplayProduct =
          getProduct: function (event) {
               event.preventDefault();
               return $.ajax({
-	             url: this.myConfig.selected.attr("href"),
+	             url: this.mySelect.data("source"),
 	             type: 'GET',
 	             dataType: 'html'
                 });
          },
          showProduct: function (response) {
-             if (this.myConfig.selected.parent("div").hasClass("selected")) {
-                    this.myConfig.selected.parent(".grid_4").removeClass("selected").animate({opacity: 1});
-                    $(".product_big").slideUp( 500, function(){ $(this).remove(); });
+             var $big = $(this.myConfig.big);
+             if (this.mySelect.parent("div").hasClass("selected")) {
+                    this.mySelect.parent(".grid_4").removeClass("selected").animate({opacity: 1});
+                    $big.slideUp( 500, function(){ $(this).remove(); });
                  } else {
                      $(".selected").removeClass("selected").animate({opacity: 1});
-                     $(".product_big").slideUp( 500, function(){ $(this).remove(); });
-                     this.myConfig.selected.parent(".grid_4").addClass("selected").animate({opacity: .6});
+                     $big.slideUp( 500, function(){ $(this).remove(); });
+                     this.mySelect.parent(".grid_4").addClass("selected").animate({opacity: .6});
                      $(response).prependTo(this.myConfig.target).addClass("product_big").hide().delay(350).slideDown(500);
                      DisplayProduct.scrollUp();
                  }
-                $("#close").click( function(event){
+                $(this.myConfig.close).click( function(event){
                        DisplayProduct.closeProduct(event);
                 });
                 
          },
          closeProduct: function (event) {
              event.preventDefault();
-             $(".product_big").slideUp( 500, function(){ $(this).remove();});
+             $(this.myConfig.big).slideUp( 500, function(){ $(this).remove();});
              $(".selected").removeClass("selected").animate({opacity: 1});
          },
          scrollUp: function() {
@@ -57,11 +60,7 @@ var DisplayProduct =
 
 $(function() {
    $(DisplayProduct.myConfig.product).click( function(event){
-       DisplayProduct.updateMyConfig({ 
-                close:'#close',
-                product: '.product_link',
-                target: '.products',
-                selected: $(this) });
+       DisplayProduct.mySelect = $(this);
        DisplayProduct.getProduct(event)
                .done(
                     function (response){
