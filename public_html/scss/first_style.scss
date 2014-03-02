@@ -191,8 +191,12 @@ select {
     width: 100%;
     max-height:44px;
     -webkit-appearance: none;
+    background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='59px' height='50px'><polyline points='46.139,15.518 25.166,36.49 4.193,15.519'/></svg>") right no-repeat;
     background-color: $dirty_white;
+    background-position: right 10px top 15px;
+    background-size: 15px 15px;
 }
+
 select:active {
     border: 1px solid $gray_1;
 }
