@@ -283,9 +283,10 @@ select:active {
         background-color: $rosso_bordeaux;
         color: $dirty_white;
         height: 2em;
-        line-height:2.2;
         vertical-align:middle;
-        
+       
+            line-height: 1.8;
+             
     }
     .p_box {
         margin-top: 0.75em ;
@@ -455,8 +456,9 @@ footer a:link {
         font-size: 0.875em;
         line-height: 1.1;   
     }
-    h3.product_name {
-            font-size: 1em;
+    .product_name {
+            font-size: 0.875em;
+            line-height: 1.1;
     }
     .category_title {
         a{
