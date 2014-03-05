@@ -9,7 +9,7 @@ html, body {
 body {
   background-color: #d7e2e4;
   color: #7c8184;
-  font-family: Helvetica, Verdana, Arial, sans-serif;
+  font-family: museo_sans500, Helvetica, Verdana, Arial, sans-serif;
   text-align: center; }
 
 /* ===========================
@@ -214,24 +214,34 @@ select:active {
     color: #712422; }
 
 .categories div {
-  margin-top: 1em;
-  margin-bottom: 1em; }
-.categories span {
-  display: block;
-  padding: 0.4em;
-  background-color: #f6ffff;
-  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); }
+  margin-bottom: 0.5em; }
+
+.categories .thecategory .image img {
+  border-radius: 100%;
+  /*      float: right;*/
+  height: auto;
+  width: 100%;
+  -webkit-box-shadow: 0 3px 2px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 3px 2px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 2px 0px rgba(0, 0, 0, 0.3);
+  border: 5px solid #f6ffff;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box; }
 
 .categories a h3 {
-  color: #d7e2e4;
-  transition: color 0.3s linear 0s; }
+  width: 100%;
+  height: 2em;
+  color: #a52926;
+  transition: color 0.3s linear 0s;
+  font-size: 1.5em; }
   .categories a h3:hover {
     color: #f6ffff; }
 
 /* ===================================
-   ===== Main Content - Products ===== 
+   ===== Main Content - Products =====  <span>
+                                    <img cla
    =================================== */
 .products span {
   display: block;
@@ -264,7 +274,9 @@ select:active {
     padding: .3em 0; }
     .product_sheet .description h1 {
       font-size: 1.75em;
-      line-height: 1.5; }
+      line-height: 1.5;
+      border-bottom: 2px solid #7c8184;
+      margin-bottom: .2em; }
     .product_sheet .description h3 {
       line-height: 1.5; }
     .product_sheet .description hr {
@@ -345,8 +357,8 @@ footer a:link {
   .product_sheet .description h1 {
     font-size: 1.5em; }
 
-  h3.title {
-    font-size: 1em; }
+  .categories a h3 {
+    font-size: 1.25em; }
 
   #contacts_info h1 {
     font-size: 1.375em; }
@@ -374,9 +386,8 @@ footer a:link {
     display: block;
     width: 100%; }
 
-  h3.title {
-    font-size: 0.875em;
-    line-height: 1.1; }
+  .categories a h3 {
+    font-size: 1em; }
 
   .product_name {
     font-size: 0.875em;
@@ -428,9 +439,8 @@ footer a:link {
   h3.product_name {
     font-size: 0.75em; }
 
-  h3.title {
-    font-size: 0.75em;
-    line-height: 1.1; }
+  .categories a h3 {
+    font-size: 0.75em; }
 
   .category_title a {
     font-size: 1.25em; }
