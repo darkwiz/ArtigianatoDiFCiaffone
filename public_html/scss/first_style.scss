@@ -52,7 +52,6 @@ h1, h2, h3, h4, h5, h6 {
 #main-content {
     margin: 0 auto;
     overflow: hidden;
-    padding: .5em 0;
     width: 100%;
 }
  #head-content {
@@ -65,8 +64,9 @@ h1, h2, h3, h4, h5, h6 {
  #footer-content {
     width: 100%;
     overflow: hidden;
-    background: none repeat scroll 0 0 rgba(124, 129, 132, 0.6); /* #7C8184 */
-    @include box-shadow( 0, 10px ,10px, -10px, rgba(0, 0, 0, 0.75));
+   background: $dirty_white;
+ /*    background: none repeat scroll 0 0 rgba(124, 129, 132, 0.6);  #7C8184 */
+/*    @include box-shadow( 0, 10px ,10px, -10px, rgba(0, 0, 0, 0.75));*/
 }
 
 
@@ -246,17 +246,21 @@ select:active {
     }   
 }
 
-.categories {
-     div {
-        margin-bottom: .5em ;
-     }
+.cat_container {
+        display: block;
+        overflow: hidden;
+        margin-bottom: .5em;
+        margin-top: .5em;
 } 
 
 
-.categories .thecategory .image img {
+.categories .thecategory {
+    .image {
+        padding: .5em .75em;
+    }
+    .image img {
         border-radius: 100%;
 /*      float: right;*/
-        
         height: auto;
         width: 100%;
         @include box-shadow(0, 3px, 2px, 0px rgba(0, 0, 0, 0.3));
@@ -266,23 +270,68 @@ select:active {
         -webkit-box-sizing: border-box;
         -ms-box-sizing: border-box;
         box-sizing: border-box;
+    }
 }
 
+
+
 .categories a h3 {
+     font-weight: 500;
+     text-align: left;
      width: 100%;
-     height: 2em;
-     color: $rosso_2;
+     color: $rosso_bordeaux;
      transition: color 0.3s linear 0s;
-     font-size:1.5em;
+     font-size: 1.375em;
+     text-transform: uppercase;
+     height: 1.5em;
      &:hover {
          color: $dirty_white;
      }
 }
 
+#super-image-container{
+    display: block;
+    height: auto;
+    min-height: 560px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+#large-image-home, .gradient {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image:url('../img/home.png');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+    height: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#large-image-info
+{
+    bottom: 5%;
+    left: 4%;
+    position: absolute;
+    z-index: 1001;
+    width:92%;
+    a{
+         color: #FFFFFF;
+         font-size: 36px;
+    }
+}
+
 
 /* ===================================
-   ===== Main Content - Products =====  <span>
-                                    <img cla
+   ===== Main Content - Products =====  
    =================================== */
 
 
@@ -357,8 +406,6 @@ select:active {
         float: right;
     }
     
-    
-   
 
 
 /* ===========================
@@ -383,11 +430,13 @@ footer {
 
 footer p {
 	text-align: center;
-	color: $dirty_white;
+/*	color: $dirty_white;*/
+        color: $gray_1;
 }
 footer a:link {
 	text-align: center;
-	color: $dirty_white;
+/*	color: $dirty_white;*/
+        color: $gray_1;
 }
 
 /* ===========================
@@ -415,6 +464,7 @@ footer a:link {
      margin: 1em;
      display: block;
 }
+
 /* ===========================
    =====    Media Query ===== 
    =========================== */
@@ -441,8 +491,9 @@ footer a:link {
           }
       }
     }
-       .categories a h3 {
-        font-size: 1.25em;
+    .categories a h3 {
+        font-size: 1em;
+        height: 1.5em;
     }
     #contacts_info {
          h1 {
@@ -451,12 +502,24 @@ footer a:link {
             font-size: 1.25em;
           }
     }
+    #super-image-container{
+        min-height: 370px;
+    }
+     #large-image-home, .gradient {
+            background-image:url('../img/tablet_home.png');
+    }
 }	
 
 /*  Display sotto i 768 px (Smartphone) */
 
 @media only screen and (max-width:767px){
     
+    #super-image-container{
+        min-height: 224px;
+    }
+     #large-image-home, .gradient {
+            background-image:url('../img/smartphone_home.png');
+    }
     #head-content{
         height: 100px;
         position: relative;
@@ -474,7 +537,8 @@ footer a:link {
          width: 100%;
      }
     .categories a h3 {
-        font-size: 1em;
+        font-size: .875em;
+        height: 1.5em;
     }
     .product_name {
             font-size: 0.875em;
@@ -550,6 +614,7 @@ footer a:link {
     }
     .categories a h3 {
         font-size: 0.75em;
+        height: 1.5em;
     }
     .category_title {
         a{
