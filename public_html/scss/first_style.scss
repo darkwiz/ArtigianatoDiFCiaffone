@@ -46,6 +46,7 @@ h6 {
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
+        text-rendering: optimizelegibility;
 }
 
 
@@ -225,12 +226,18 @@ select:active {
     }
     
 .title {
-    background-color: $rosso_bordeaux;
-    padding: 0.4em 0;
+   
+    padding-top: 10px; 
     color: $dirty_white;
-    height: 2em;
-}
-
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+     @include alpha-attribute('background-color', rgba($rosso_bordeaux, .9), $dirty_white);
+    }
+ 
+    
 .category_title {
     font-weight: 500;
     text-align: left;
@@ -260,16 +267,17 @@ select:active {
     }
     .image img {
         border-radius: 100%;
-/*      float: right;*/
         height: auto;
         width: 100%;
-        @include box-shadow(0, 3px, 2px, 0px rgba(0, 0, 0, 0.3));
         border: 5px solid $dirty_white;
-       
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        -ms-box-sizing: border-box;
-        box-sizing: border-box;
+        @include opacity(0.7);
+        @include box-shadow(0, 3px, 2px, 0px rgba(0, 0, 0, 0.3));
+        @include box-sizing(border-box);
+        @include transition(opacity, .3s, ease-in-out);
+        &:hover {
+            @include opacity(1);
+            zoom: 1;
+        }
     }
 }
 
@@ -301,7 +309,7 @@ select:active {
 #large-image-home, .gradient {
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover;
+    
     background-image:url('../img/home.png');
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -445,7 +453,7 @@ footer a:link {
 
 #contacts_info {
     margin: 1em;
-    text-align: left;
+    text-align: right;
     p {
         margin: 0 0 10px 10px;
         padding: 0.5em;
@@ -463,6 +471,7 @@ footer a:link {
      float: none;
      margin: 1em;
      display: block;
+     border-left: 2px solid $gray_1;  
 }
 
 /* ===========================
@@ -513,12 +522,19 @@ footer a:link {
 /*  Display sotto i 768 px (Smartphone) */
 
 @media only screen and (max-width:767px){
-    
     #super-image-container{
         min-height: 224px;
     }
-     #large-image-home, .gradient {
-            background-image:url('../img/smartphone_home.png');
+    #large-image-home, .gradient {
+        background-image:url('../img/smartphone_home.png');
+    }
+    #large-image-info {
+        a{
+        font-size: 28px;
+    }
+    h2 {
+        font-size: 20px;
+    }
     }
     #head-content{
         height: 100px;
@@ -627,5 +643,13 @@ footer a:link {
             padding: 0;
             font-size: 0.875em;
           }
+    }
+    #large-image-info {
+        a{
+        font-size: 22px;
+    }
+    h2 {
+        font-size: 16px;
+    }
     }
 }  

@@ -41,7 +41,8 @@ h6 {
   /* 14px */ }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: bold; }
+  font-weight: bold;
+  text-rendering: optimizelegibility; }
 
 #main-content {
   margin: 0 auto;
@@ -193,10 +194,15 @@ select:active {
     line-height: 1.5; }
 
 .title {
-  background-color: #712422;
-  padding: 0.4em 0;
+  padding-top: 10px;
   color: #f6ffff;
-  height: 2em; }
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: #7e3938;
+  background-color: rgba(113, 36, 34, 0.9); }
 
 .category_title {
   font-weight: 500;
@@ -220,17 +226,27 @@ select:active {
   padding: .5em .75em; }
 .categories .thecategory .image img {
   border-radius: 100%;
-  /*      float: right;*/
   height: auto;
   width: 100%;
+  border: 5px solid #f6ffff;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
   -webkit-box-shadow: 0 3px 2px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 3px 2px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 0 3px 2px 0px rgba(0, 0, 0, 0.3);
-  border: 5px solid #f6ffff;
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out; }
+  .categories .thecategory .image img:hover {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    zoom: 1; }
 
 .categories a h3 {
   font-weight: 500;
@@ -255,7 +271,6 @@ select:active {
 #large-image-home, .gradient {
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
   background-image: url("../img/home.png");
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -367,7 +382,7 @@ footer a:link {
    =========================== */
 #contacts_info {
   margin: 1em;
-  text-align: left; }
+  text-align: right; }
   #contacts_info p {
     margin: 0 0 10px 10px;
     padding: 0.5em;
@@ -380,7 +395,8 @@ footer a:link {
 #contacts_pic {
   float: none;
   margin: 1em;
-  display: block; }
+  display: block;
+  border-left: 2px solid #7c8184; }
 
 /* ===========================
    =====    Media Query ===== 
@@ -418,6 +434,11 @@ footer a:link {
 
   #large-image-home, .gradient {
     background-image: url("../img/smartphone_home.png"); }
+
+  #large-image-info a {
+    font-size: 28px; }
+  #large-image-info h2 {
+    font-size: 20px; }
 
   #head-content {
     height: 100px;
@@ -503,4 +524,9 @@ footer a:link {
   #contacts_info p {
     margin: 0 0 5px 5px;
     padding: 0;
-    font-size: 0.875em; } }
+    font-size: 0.875em; }
+
+  #large-image-info a {
+    font-size: 22px; }
+  #large-image-info h2 {
+    font-size: 16px; } }
