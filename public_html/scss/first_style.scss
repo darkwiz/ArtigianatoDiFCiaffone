@@ -65,9 +65,10 @@ h1, h2, h3, h4, h5, h6 {
  #footer-content {
     width: 100%;
     overflow: hidden;
-   background: $dirty_white;
- /*    background: none repeat scroll 0 0 rgba(124, 129, 132, 0.6);  #7C8184 */
-/*    @include box-shadow( 0, 10px ,10px, -10px, rgba(0, 0, 0, 0.75));*/
+/*    @include box-shadow( 0, 5px ,5px, -5px, rgba(0, 0, 0, 0.75));*/
+    background: $dirty_white;
+ /*  background: none repeat scroll 0 0 rgba(124, 129, 132, 0.6);  #7C8184 */
+/*   @include box-shadow( 0, 10px ,10px, -10px, rgba(0, 0, 0, 0.75));*/
 }
 
 
@@ -79,6 +80,10 @@ embed,
 object,
 video {
     max-width: 100%;
+}
+
+img {
+    vertical-align: middle;
 }
 
 /* ===========================
@@ -109,7 +114,6 @@ header {
     img {
         height: auto;
         max-height: 92px;
-        vertical-align: middle;
     }
 }
 
@@ -163,7 +167,6 @@ nav li a {
         padding: 1px;
     }
     img.social_icon {
-      vertical-align: middle;
       margin: 0;
     }
     a {
@@ -188,7 +191,6 @@ select {
     border-radius: 5px;
     color: $rosso_bordeaux;
     padding: 0.75em;
-    vertical-align: middle;
     width: 100%;
     max-height:44px;
     -webkit-appearance: none;
@@ -206,7 +208,6 @@ select:active {
     h3 {
        font-size: 1.25em;
        font-weight: 500;
-       vertical-align: middle;
        line-height: 2;
     }
     padding: 0.75em 0;
@@ -214,11 +215,12 @@ select:active {
 }
 .text_box {
      margin-top: 10px;
+     margin-bottom: 10px;
      background-color: $dirty_white;
      overflow: hidden;  
      max-width: 100%;
      @include box-shadow(0, 5px, 5px, rgba(0, 0, 0, 0.2));
-     p {
+     p#history {
         padding: 0.875em;
         text-align: justify;
         line-height: 1.5;
@@ -226,10 +228,9 @@ select:active {
     }
     
 .title {
-   
-    padding-top: 10px; 
+    padding-top: .2em; 
     color: $dirty_white;
-    font-size: 36px;
+    font-size: 34px;
     font-weight: 500;
     line-height: 1.1;
     letter-spacing: 1px;
@@ -261,41 +262,38 @@ select:active {
 } 
 
 
-.categories .thecategory {
-    .image {
-        padding: .5em .75em;
-    }
-    .image img {
-        border-radius: 100%;
-        height: auto;
-        width: 100%;
-        border: 5px solid $dirty_white;
-        @include opacity(0.7);
-        @include box-shadow(0, 3px, 2px, 0px rgba(0, 0, 0, 0.3));
-        @include box-sizing(border-box);
-        @include transition(opacity, .3s, ease-in-out);
-        &:hover {
-            @include opacity(1);
-            zoom: 1;
-        }
-    }
-}
-
-
-
-.categories a h3 {
-     font-weight: 500;
-     text-align: left;
+.categories {
+   
+    h3 {
      width: 100%;
      color: $rosso_bordeaux;
-     transition: color 0.3s linear 0s;
+     font-weight: 500;
+     text-align: left;
      font-size: 1.375em;
      text-transform: uppercase;
      height: 1.5em;
-     &:hover {
-         color: $dirty_white;
-     }
+    }
+    .thecategory {
+        .image {
+            padding: .5em .75em;
+        }
+        .image img {
+            border-radius: 100%;
+            height: auto;
+            width: 100%;
+            border: 5px solid $dirty_white;
+            @include opacity(0.7);
+            @include box-shadow(0, 3px, 2px, 0px rgba(0, 0, 0, 0.3));
+            @include box-sizing(border-box);
+            @include transition(opacity, .3s, ease-in-out);
+            &:hover {
+                @include opacity(1);
+                zoom: 1;
+            }
+    }
+  }
 }
+
 
 #super-image-container{
     display: block;
@@ -354,9 +352,7 @@ select:active {
         background-color: $rosso_bordeaux;
         color: $dirty_white;
         height: 2em;
-        vertical-align:middle;
-       
-            line-height: 1.8;
+        line-height: 1.8;
              
     }
     .p_box {
@@ -378,10 +374,14 @@ select:active {
     .description {
             text-align: left;
             padding: .3em 0;
+            hr.styled { 
+                border: 0; 
+                height: 1px;
+                @include background-img(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+            }
             h1{
                 font-size: 1.75em;
                 line-height: 1.5;
-                border-bottom: 2px solid $gray_1;
                 margin-bottom: .2em;
             }
             h3{
@@ -433,45 +433,61 @@ footer, .push {
 }
 
 footer {
+        text-align: left;
         padding-top: 20px;
+        line-height: 1.3;
+        font-family: Helvetica, Verdana, Arial, sans-serif;
+        a{
+             transition: color 0.3s linear 0s;
+             color: $gray_1;
+             &:hover {
+                color: $rosso_bordeaux;
+            }
+        }
+        .bottom-links {
+            margin: 0 0 20px 0;
+        }
+        .footer-title {
+            margin: 0 0 5px 0;
+        }
+/*        .brand img{   centering logo
+            margin: 0 auto;
+            display: block;
+        }*/
 }
 
-footer p {
-	text-align: center;
-/*	color: $dirty_white;*/
-        color: $gray_1;
-}
-footer a:link {
-	text-align: center;
-/*	color: $dirty_white;*/
-        color: $gray_1;
-}
 
 /* ===========================
    =====     Contacts    ===== 
    =========================== */
 
 #contacts_info {
-    margin: 1em;
-    text-align: right;
+    margin: 2em;
+    text-align: left;
     p {
-        margin: 0 0 10px 10px;
-        padding: 0.5em;
+        margin: 0 0 .25em 2em;
         font-size: 1.25em;
     }
-    h1, h2 {
+    h2 {
+        margin: 0 0 .25em 1.75em;
         line-height: 1.5;
     }
     h1 {
+        margin: 0 0 .125em 1.25em;
         font-size: 1.875em;
+        line-height: 1.5;
     }
 }
 
 #contacts_pic {
      float: none;
-     margin: 1em;
+     margin: 2em;
      display: block;
      border-left: 2px solid $gray_1;  
+}
+
+.symbol {
+    float: left;
 }
 
 /* ===========================

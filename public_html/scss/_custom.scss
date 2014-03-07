@@ -68,3 +68,10 @@ $dirty_white:#F6FFFF;
   #{$attribute}: $solid-color;
   #{$attribute}: $color;
 }
+
+@mixin background-img ($position, $rgba1, $rgba2, $rgba3) {
+    background-image: -webkit-linear-gradient($position, $rgba1, $rgba2, $rgba3); 
+    background-image: -moz-linear-gradient($position, $rgba1, $rgba2, $rgba3); 
+    background-image: -ms-linear-gradient($position, $rgba1, $rgba2, $rgba3);
+    background-image: -o-linear-gradient($position, $rgba1, $rgba2, $rgba3)
+}
