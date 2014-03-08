@@ -298,32 +298,14 @@ select:active {
 #super-image-container{
     display: block;
     height: auto;
-    min-height: 560px;
     overflow: hidden;
     position: relative;
     width: 100%;
 }
 
-#large-image-home, .gradient {
-    background-position: center center;
-    background-repeat: no-repeat;
-    
-    background-image:url('../img/home.png');
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    
-    height: 100%;
-    max-height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
 
 #large-image-info
-{
+{   text-align: left;
     bottom: 5%;
     left: 4%;
     position: absolute;
@@ -335,6 +317,15 @@ select:active {
     }
 }
 
+#large-image-home {
+    background: url('../img/home.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    @include background-size(cover);
+    height: 0;
+    padding-bottom: 24.647887%;
+    width: 100%;
+}
 
 /* ===================================
    ===== Main Content - Products =====  
@@ -497,6 +488,12 @@ footer {
 /* Display sotto i 1279 px (Tablet) */
 
 @media only screen and (max-width:1279px) {
+    #large-image-home {
+        background: url('../img/home_1024.png');
+        @include background-size(cover);
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
     .select_container {
         h3 {
             padding: .25em 0;
@@ -527,24 +524,19 @@ footer {
             font-size: 1.25em;
           }
     }
-    #super-image-container{
-        min-height: 370px;
-    }
-     #large-image-home, .gradient {
-            background-image:url('../img/tablet_home.png');
-    }
 }	
 
 /*  Display sotto i 768 px (Smartphone) */
 
 @media only screen and (max-width:767px){
-    #super-image-container{
-        min-height: 224px;
+
+    #large-image-home {
+        background: url('../img/home_768.png');
+        @include background-size(cover);
+        background-position: center center;
+        background-repeat: no-repeat;
     }
-    #large-image-home, .gradient {
-        background-image:url('../img/smartphone_home.png');
-    }
-    #large-image-info {
+    #super-image-container {
         a{
         font-size: 28px;
     }
@@ -641,6 +633,20 @@ footer {
 }
 }
 @media only screen and (max-width:294px){
+    #large-image-home {
+        background: url('../img/home_480.png');
+        @include background-size(cover);
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    #super-image-container {
+        a{
+        font-size: 28px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    }
     h3.product_name {
             font-size: 0.75em;
     }
@@ -659,13 +665,5 @@ footer {
             padding: 0;
             font-size: 0.875em;
           }
-    }
-    #large-image-info {
-        a{
-        font-size: 22px;
-    }
-    h2 {
-        font-size: 16px;
-    }
     }
 }  

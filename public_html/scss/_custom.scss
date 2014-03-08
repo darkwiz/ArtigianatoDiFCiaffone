@@ -75,3 +75,10 @@ $dirty_white:#F6FFFF;
     background-image: -ms-linear-gradient($position, $rgba1, $rgba2, $rgba3);
     background-image: -o-linear-gradient($position, $rgba1, $rgba2, $rgba3)
 }
+
+@mixin background-size($size) {
+    -moz-background-size: $size;
+    -webkit-background-size: $size;
+    -o-background-size: $size;
+     background-size: $size;
+}
