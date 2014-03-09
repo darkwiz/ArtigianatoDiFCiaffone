@@ -31,12 +31,12 @@ var DisplayProduct =
          showProduct: function (response) {
              var $big = $(this.myConfig.big);
              if (this.mySelect.parent("div").hasClass("selected")) {
-                    this.mySelect.parent(".grid_4").removeClass("selected").animate({opacity: 1});
+                    this.mySelect.parent(".p_box").removeClass("selected").animate({opacity: 1});
                     $big.slideUp( 500, function(){ $(this).remove(); });
                  } else {
                      $(".selected").removeClass("selected").animate({opacity: 1});
                      $big.slideUp( 500, function(){ $(this).remove(); });
-                     this.mySelect.parent(".grid_4").addClass("selected").animate({opacity: .6});
+                     this.mySelect.parent(".p_box").addClass("selected").animate({opacity: .6});
                      $(response).prependTo(this.myConfig.target).addClass("product_big").hide().delay(350).slideDown(500);
                      DisplayProduct.scrollUp();
                  }

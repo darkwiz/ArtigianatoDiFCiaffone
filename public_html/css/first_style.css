@@ -185,10 +185,7 @@ select:active {
   margin-bottom: 10px;
   background-color: #f6ffff;
   overflow: hidden;
-  max-width: 100%;
-  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); }
+  max-width: 100%; }
   .text_box p#history {
     padding: 0.875em;
     text-align: justify;
@@ -290,21 +287,18 @@ select:active {
 /* ===================================
    ===== Main Content - Products =====  
    =================================== */
-.products span {
-  display: block;
-  padding: 1em 0;
-  background-color: #f6ffff;
-  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); }
 .products .product_name {
   background-color: #712422;
   color: #f6ffff;
   height: 2em;
   line-height: 1.8; }
 .products .p_box {
-  margin-top: 0.75em;
-  margin-bottom: 0.75em; }
+  margin-bottom: 1.25em;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 3px 8px -4px rgba(0, 0, 0, 0.15); }
+.products img {
+  height: 100%; }
 
 /*===========================
  =====  Scheda Prodotto  ==== 
@@ -381,29 +375,37 @@ footer {
     margin: 0 0 20px 0; }
   footer .footer-title {
     margin: 0 0 5px 0; }
+  footer li.active a {
+    color: #712422;
+    font-weight: bold; }
 
 /* ===========================
    =====     Contacts    ===== 
    =========================== */
 #contacts_info {
-  margin: 2em;
-  text-align: left; }
+  margin: 2em 0 0 3em;
+  text-align: left;
+  font-size: 1.25em; }
+  #contacts_info .info {
+    padding-bottom: .75em; }
   #contacts_info p {
     margin: 0 0 .25em 2em;
     font-size: 1.25em; }
   #contacts_info h2 {
     margin: 0 0 .25em 1.75em;
-    line-height: 1.5; }
+    text-transform: uppercase; }
   #contacts_info h1 {
-    margin: 0 0 .125em 1.25em;
-    font-size: 1.875em;
-    line-height: 1.5; }
+    margin-bottom: .25em;
+    text-transform: uppercase; }
 
 #contacts_pic {
   float: none;
-  margin: 2em;
-  display: block;
-  border-left: 2px solid #7c8184; }
+  margin: 1.5em .5em;
+  display: block; }
+  #contacts_pic img {
+    -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); }
 
 .symbol {
   float: left; }
@@ -436,10 +438,8 @@ footer {
     font-size: 1em;
     height: 1.5em; }
 
-  #contacts_info h1 {
-    font-size: 1.375em; }
-  #contacts_info h2 {
-    font-size: 1.25em; } }
+  #contacts_info {
+    font-size: 1em; } }
 /*  Display sotto i 768 px (Smartphone) */
 @media only screen and (max-width: 767px) {
   #large-image-home {
@@ -493,10 +493,9 @@ footer {
     text-align: left;
     padding: 5px 0; }
 
-  #contacts_info h1 {
-    font-size: 1.25em; }
-  #contacts_info h2 {
-    font-size: 1em; }
+  #contacts_info {
+    font-size: .875em;
+    margin: 1em 0 0 2em; }
 
   .container_12 .grid_3 {
     width: 48.0%; }
