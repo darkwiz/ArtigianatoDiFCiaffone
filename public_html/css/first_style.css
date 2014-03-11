@@ -1,5 +1,5 @@
 /* ===========================
-   ======= Body style ======== 
+   ======= General ======== 
    =========================== */
 html, body {
   margin: 0;
@@ -15,7 +15,7 @@ body {
 /* ===========================
    ========= Headings ======== 
    =========================== */
-/* base font: inherit (16px)  */
+/* base font: 16px  */
 h1 {
   font-size: 1.5em;
   /* 24px */ }
@@ -181,14 +181,14 @@ select:active {
     line-height: 2; }
 
 .text_box {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  background-color: #f6ffff;
+  margin-top: .75em;
+  margin-bottom: .75em;
+  /*background-color: $dirty_white;*/
   overflow: hidden;
   max-width: 100%; }
   .text_box p#history {
-    padding: 0.875em;
-    text-align: justify;
+    padding: 1em;
+    text-align: left;
     line-height: 1.5; }
 
 .title {
@@ -281,7 +281,18 @@ select:active {
   -o-background-size: cover;
   background-size: cover;
   height: 0;
-  padding-bottom: 24.647887%;
+  padding-bottom: 24.6478873%;
+  width: 100%; }
+
+#image-chisiamo-cont {
+  margin-top: .75em;
+  margin-bottom: .75em; }
+
+#image-chisiamo {
+  background: url("../img/chisiamo.png");
+  background-repeat: no-repeat;
+  height: 0;
+  padding-bottom: 133.3333333%;
   width: 100%; }
 
 /* ===================================
@@ -351,28 +362,24 @@ select:active {
   height: auto !important;
   min-height: 100%;
   height: 100%;
-  margin: 0 auto -4em; }
+  margin: 0 auto -9em; }
 
 footer, .push {
-  height: 4em;
+  height: 9em;
   clear: both; }
 
 footer {
   text-align: left;
-  padding-top: 20px;
+  padding-top: 1.25em;
   line-height: 1.3;
-  font-family: Helvetica, Verdana, Arial, sans-serif;
-  /*        .brand img{   centering logo
-              margin: 0 auto;
-              display: block;
-          }*/ }
+  font-family: Helvetica, Verdana, Arial, sans-serif; }
   footer a {
     transition: color 0.3s linear 0s;
     color: #7c8184; }
     footer a:hover {
       color: #712422; }
   footer .bottom-links {
-    margin: 0 0 20px 0; }
+    margin: 0 0 1.5em 0; }
   footer .footer-title {
     margin: 0 0 5px 0; }
   footer li.active a {
@@ -385,12 +392,13 @@ footer {
 #contacts_info {
   margin: 2em 0 0 3em;
   text-align: left;
-  font-size: 1.25em; }
+  font-size: 1.5em; }
   #contacts_info .info {
     padding-bottom: .75em; }
   #contacts_info p {
     margin: 0 0 .25em 2em;
-    font-size: 1.25em; }
+    font-size: 1.25em;
+    color: #a52926; }
   #contacts_info h2 {
     margin: 0 0 .25em 1.75em;
     text-transform: uppercase; }
@@ -401,14 +409,24 @@ footer {
 #contacts_pic {
   float: none;
   margin: 1.5em .5em;
-  display: block; }
-  #contacts_pic img {
-    -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); }
+  display: block;
+  border: 1px solid #7c8184; }
 
 .symbol {
   float: left; }
+
+.inset-text {
+  color: #7c8184;
+  color: rgba(124, 129, 132, 0.8);
+  text-shadow: 1px 4px 6px #d7e2e4, 0 0 0 black, 1px 4px 6px #d7e2e4; }
+  .inset-text::-moz-selection {
+    background: #d7e2e4;
+    color: #f6ffff;
+    text-shadow: none; }
+  .inset-text::selection {
+    background: #d7e2e4;
+    color: #f6ffff;
+    text-shadow: none; }
 
 /* ===========================
    =====    Media Query ===== 
