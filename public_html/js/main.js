@@ -59,6 +59,9 @@ var DisplayProduct =
 
 
 $(function() {
+     $('#menu').slicknav({
+		prependTo:'#mobile_menu'
+    });
    $(DisplayProduct.myConfig.product).click( function(event){
        DisplayProduct.mySelect = $(this);
        DisplayProduct.getProduct(event)

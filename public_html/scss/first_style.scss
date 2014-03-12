@@ -508,7 +508,7 @@ footer {
 
 /* Display sotto i 1279 px (Tablet) */
 
-@media only screen and (max-width:1279px) {
+@media only screen and (min-width: 768px) and (max-width:1279px) {
     #large-image-home {
         background: url('../img/home_1024.png');
         @include background-size(cover);
@@ -545,7 +545,7 @@ footer {
 
 /*  Display sotto i 768 px (Smartphone) */
 
-@media only screen and (max-width:767px){
+@media only screen and (min-width:295px) and (max-width:767px){
 
     #large-image-home {
         background: url('../img/home_768.png');
