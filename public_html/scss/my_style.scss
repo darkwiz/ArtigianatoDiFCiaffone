@@ -108,12 +108,13 @@ header {
 
 .the-logo {
     background: none repeat scroll 0 0 $dirty_white;
-    margin: 0 0 8px;
-    padding: 5px;
+    margin: 0 0 .25em;
+    padding: .125em;
     text-align: center;
     img {
         height: auto;
-        max-height: 92px;
+/*      max-height: 92px;*/
+        max-height: 100px;
     }
 }
 
@@ -315,6 +316,13 @@ select:active {
          color: #FFFFFF;
          font-size: 36px;
     }
+    h1 {
+        color: $dirty_white;
+    }
+    h2 {
+        text-shadow: 2px 2px 2px #000;
+        color: $gray_light;
+    }
 }
 
 #large-image-home {
@@ -332,7 +340,7 @@ select:active {
         background-repeat: no-repeat;
     }
     @media only screen and (min-width:296px) and (max-width:786px) {
-        background: url('../img/home_786.png');
+        background: url('../img/home_768.png');
         @include background-size(cover);
         background-position: center center;
         background-repeat: no-repeat;
@@ -342,14 +350,16 @@ select:active {
 #image-chisiamo-cont {
     margin-top: .75em;
     margin-bottom: .75em;
+    padding: 1em 0;
+    width: 100%;
 }
 
 #image-chisiamo {
-    background: url('../img/chisiamo.png');
+    background: url('../img/storia.png');
     background-repeat: no-repeat;
+    background-size: contain;
     height: 0;
-    padding-bottom: 133.3333333%;
-    width: 100%;
+    padding-bottom: 760px;
 }
 
 /* ===================================
@@ -552,13 +562,6 @@ footer {
 /*  Display sotto i 768 px (Smartphone) */
 
 @media only screen and (max-width:767px){
-
-    #large-image-home {
-        background: url('../img/home_768.png');
-        @include background-size(cover);
-        background-position: center center;
-        background-repeat: no-repeat;
-    }
     #super-image-container {
         a{
         font-size: 28px;
@@ -567,8 +570,8 @@ footer {
         font-size: 20px;
     }
     }
-    #head-content{
-        height: 100px;
+    #head-content{/*
+        height: 100px;*/
         position: relative;
         @include box-shadow(0,0,0,0);
     }
@@ -652,12 +655,6 @@ footer {
 }
 }
 @media only screen and (max-width:294px){
-    #large-image-home {
-        background: url('../img/home_480.png');
-        @include background-size(cover);
-        background-position: center center;
-        background-repeat: no-repeat;
-    }
     #super-image-container {
         a{
         font-size: 28px;

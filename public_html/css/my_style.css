@@ -94,12 +94,13 @@ header {
 
 .the-logo {
   background: none repeat scroll 0 0 #f6ffff;
-  margin: 0 0 8px;
-  padding: 5px;
+  margin: 0 0 .25em;
+  padding: .125em;
   text-align: center; }
   .the-logo img {
     height: auto;
-    max-height: 92px; }
+    /*      max-height: 92px;*/
+    max-height: 100px; }
 
 nav {
   width: 100%;
@@ -271,6 +272,11 @@ select:active {
   #large-image-info a {
     color: #FFFFFF;
     font-size: 36px; }
+  #large-image-info h1 {
+    color: #f6ffff; }
+  #large-image-info h2 {
+    text-shadow: 2px 2px 2px #000;
+    color: #d7e2e4; }
 
 #large-image-home {
   background: url("../img/home.png");
@@ -294,7 +300,7 @@ select:active {
       background-repeat: no-repeat; } }
   @media only screen and (min-width: 296px) and (max-width: 786px) {
     #large-image-home {
-      background: url("../img/home_786.png");
+      background: url("../img/home_768.png");
       -moz-background-size: cover;
       -webkit-background-size: cover;
       -o-background-size: cover;
@@ -304,14 +310,16 @@ select:active {
 
 #image-chisiamo-cont {
   margin-top: .75em;
-  margin-bottom: .75em; }
+  margin-bottom: .75em;
+  padding: 1em 0;
+  width: 100%; }
 
 #image-chisiamo {
-  background: url("../img/chisiamo.png");
+  background: url("../img/storia.png");
   background-repeat: no-repeat;
+  background-size: contain;
   height: 0;
-  padding-bottom: 133.3333333%;
-  width: 100%; }
+  padding-bottom: 760px; }
 
 /* ===================================
    ===== Main Content - Products =====  
@@ -469,22 +477,14 @@ footer {
     font-size: 1em; } }
 /*  Display sotto i 768 px (Smartphone) */
 @media only screen and (max-width: 767px) {
-  #large-image-home {
-    background: url("../img/home_768.png");
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat; }
-
   #super-image-container a {
     font-size: 28px; }
   #super-image-container h2 {
     font-size: 20px; }
 
   #head-content {
-    height: 100px;
+          /*
+height: 100px;*/
     position: relative;
     -webkit-box-shadow: 0 0 0 0;
     -moz-box-shadow: 0 0 0 0;
@@ -553,15 +553,6 @@ footer {
   .container_12 .social, .container_12 .grid_1 {
     width: 14.667%; } }
 @media only screen and (max-width: 294px) {
-  #large-image-home {
-    background: url("../img/home_480.png");
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat; }
-
   #super-image-container a {
     font-size: 28px; }
   #super-image-container h2 {
