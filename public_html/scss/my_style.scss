@@ -217,12 +217,11 @@ select:active {
 .text_box {
      margin-top: .75em;
      margin-bottom: .75em;
-     /*background-color: $dirty_white;*/
      overflow: hidden;  
      max-width: 100%;
 
      p#history {
-        padding: 1em;
+        padding: 1em 0;
         text-align: left;
         line-height: 1.5;
      }
@@ -231,7 +230,7 @@ select:active {
 .title {
     padding-top: .2em; 
     color: $dirty_white;
-    font-size: 34px;
+    font-size: 2em;
     font-weight: 500;
     line-height: 1.1;
     letter-spacing: 1px;
@@ -269,7 +268,6 @@ select:active {
      width: 100%;
      color: $rosso_bordeaux;
      font-weight: 500;
-     text-align: left;
      font-size: 1.375em;
      text-transform: uppercase;
      height: 1.5em;
@@ -306,18 +304,16 @@ select:active {
 
 
 #large-image-info
-{   text-align: left;
+{   
+    text-align: left;
     bottom: 5%;
     left: 4%;
     position: absolute;
     z-index: 1001;
     width:92%;
-    a{
-         color: #FFFFFF;
-         font-size: 36px;
-    }
-    h1 {
+    h1 a{
         color: $dirty_white;
+        font-size: 2em;
     }
     h2 {
         text-shadow: 2px 2px 2px #000;
@@ -347,6 +343,10 @@ select:active {
     }
 }
 
+#large-image-subtitle{
+    padding-top: .25em;
+}
+
 #image-chisiamo-cont {
     margin-top: .75em;
     margin-bottom: .75em;
@@ -373,15 +373,12 @@ select:active {
         color: $dirty_white;
         height: 2em;
         line-height: 1.8;
+        @include border-bottom-radius(5px);
     }
     .p_box {
         margin-bottom: 1.25em;
         overflow: hidden;
         text-align: center;
-        box-shadow: 0 3px 8px -4px rgba(0, 0, 0, 0.15);
-    }
-    img {
-        height: 100%;
     }
 } 
     
@@ -420,24 +417,27 @@ select:active {
         font-weight: 500;
         margin: 0 0 10px 10px;
     }
-    .product_img_container {
-        padding: .3em 0;
-    }
-    
 }
 
-
-#close {
+.close {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    a#close{
         cursor: pointer;
         line-height: 1.5;
         font-size: 1.25em;
-        margin: 0 9px;
-        padding-bottom: 4px;
         color: $gray_1;
         text-decoration: underline;
-        float: right;
     }
-    
+}
+ /* under test */
+#thumbnails {   
+ margin: 0;
+ padding: 0;
+}
+ /* under test */
 
 
 /* ===========================
@@ -531,6 +531,14 @@ footer {
 /* Display sotto i 1279 px (Tablet) */
 
 @media only screen and (max-width:1279px) {
+    .title{
+        font-size: 1.5em;
+    }
+    #large-image-info{
+        h1 a {
+            font-size: 1.5em;
+        }
+    }
     .select_container {
         h3 {
             padding: .25em 0;
@@ -550,9 +558,26 @@ footer {
           }
       }
     }
-    .categories a h3 {
-        font-size: 1em;
-        height: 1.5em;
+    /* under test */
+    .container_12 {
+        .grid_8
+        {
+            width: 98.0%;
+        }
+        .thumbnails{
+            width: 98.0%;
+                #thumbnails{
+                  li {
+                      width:31.333%;
+                      float: left;
+                  }
+                  }
+        }
+    }
+     /* under test */
+    .categories h3 {
+        font-size: 1.25em;
+        height: 1.75em;
     }
     #contacts_info {
         font-size: 1em;
@@ -562,13 +587,16 @@ footer {
 /*  Display sotto i 768 px (Smartphone) */
 
 @media only screen and (max-width:767px){
-    #super-image-container {
-        a{
-        font-size: 28px;
+    .title{
+        font-size: 1.25em;
     }
-    h2 {
-        font-size: 20px;
-    }
+    #large-image-info{
+        h1 a {
+            font-size: 1em;
+        }
+        h2 {
+           font-size: .875em;
+        }
     }
     #head-content{/*
         height: 100px;*/
@@ -594,6 +622,17 @@ footer {
             font-size: 0.875em;
             line-height: 1.1;
     }
+       .product_img_container {
+        padding: .875em 0;
+    }
+     /* under test */
+    #thumbnails{
+        li {
+            width:48.0%;
+            float: left;
+        }
+    }
+     /* under test */
     .category_title {
         a{
         font-size: 1.5em;}
@@ -606,6 +645,10 @@ footer {
     #contacts_info {
         font-size: .875em;
         margin: 1em 0 0 2em;
+    }
+    .categories h3 {
+        font-size: 1em;
+        height: 1.5em;
     }
         .container_12 {
 
@@ -655,18 +698,18 @@ footer {
 }
 }
 @media only screen and (max-width:294px){
-    #super-image-container {
-        a{
-        font-size: 28px;
+    #large-image-info{
+    h1 {
+        font-size: .875em;
     }
     h2 {
-        font-size: 20px;
+       font-size: 0.75em;
     }
     }
     h3.product_name {
             font-size: 0.75em;
     }
-    .categories a h3 {
+    .categories h3 {
         font-size: 0.75em;
         height: 1.5em;
     }
