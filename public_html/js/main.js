@@ -8,12 +8,14 @@
 var DisplayProduct =
 {       
         mySelect: undefined,
+        myBig: undefined,
 
         myConfig : {
                 close:'#close',
                 product: '.product_link',
                 target: '.products',
-                big: ".product_big"
+                big: ".product_big",
+                thumbs: ".thumb_photo img"
          },  
          updateMyConfig: function( newConfig ) {
             if ( typeof newConfig === "object" ) {
@@ -54,6 +56,15 @@ var DisplayProduct =
              $('html, body').animate({
                                     scrollTop: $("#top").offset().top
                     }, 1500);
+         },
+         swapImage: function() {
+             var thmb = this.myBig;
+             console.log(this.myBig.prop("src"));
+             var src = this.myBig.data("src");
+             $('.product_img_container img').fadeOut(400,function(){
+                thmb.prop("src", $(this).data("src"));
+             $(this).fadeIn(400)[0].src = src;
+            });
          }
 };
 
@@ -62,19 +73,25 @@ $(function() {
      $('#menu').slicknav({
 		prependTo:'#mobile_menu'
     });
+    
    $(DisplayProduct.myConfig.product).click( function(event){
        DisplayProduct.mySelect = $(this);
        DisplayProduct.getProduct(event)
                .done(
                     function (response){
                         DisplayProduct.showProduct(response);
+                        $(".thumb_photo img").on("click", function(){
+                            DisplayProduct.myBig = $(this);
+                            DisplayProduct.swapImage();
+                         });
                     })
                .fail( function () {
                     alert("Non ancora disponibile");
                     return false;
                }); 
         });
-     
+    
+    
    });
    
    
