@@ -59,11 +59,10 @@ var DisplayProduct =
          },
          swapImage: function() {
              var thmb = this.myBig;
-             console.log(this.myBig.prop("src"));
-             var src = this.myBig.data("src");
+             var src = this.myBig.prop("src");
              $('.product_img_container img').fadeOut(400,function(){
-                thmb.prop("src", $(this).data("src"));
-             $(this).fadeIn(400)[0].src = src;
+                thmb.prop("src", $(this).prop("src").replace('big','small'));
+             $(this).fadeIn(400)[0].src = src.replace('small','big');
             });
          }
 };
