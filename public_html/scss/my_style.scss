@@ -1,6 +1,5 @@
 @import "_custom.scss";
 
-
 /* ===========================
    ======= General ======== 
    =========================== */
@@ -274,13 +273,15 @@ select:active {
     }
     .thecategory {
         .image {
-            padding: .5em .75em;
+            padding: .35em .35em;
+            max-width: 240px;
+            margin: auto;
         }
         .image img {
             border-radius: 100%;
             height: auto;
             width: 100%;
-            border: 5px solid $dirty_white;
+            border: 3px solid $dirty_white;
             @include opacity(0.7);
             @include box-shadow(0, 3px, 2px, 0px rgba(0, 0, 0, 0.3));
             @include box-sizing(border-box);
@@ -359,7 +360,10 @@ select:active {
     background-repeat: no-repeat;
     background-size: contain;
     height: 0;
-    padding-bottom: 760px;
+    box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.1);
+    $target : 760;
+    $parent : 670;
+    padding-bottom: percentage(($target/$parent));
 }
 
 /* ===================================
@@ -387,6 +391,7 @@ select:active {
    =========================== */
     
 .product_sheet {
+    @include border-radius(5px);
     max-width: 100%;
     display: block;
     background-color: $dirty_white;
@@ -417,6 +422,11 @@ select:active {
         font-weight: 500;
         margin: 0 0 10px 10px;
     }
+     .product_img_container{
+        img {
+           box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.1);
+        }
+    }
 }
 
 .close {
@@ -433,11 +443,11 @@ select:active {
     }
 }
  /* under test */
-#thumbnails {   
+#thumbnails {
     margin: 0;
     padding: 0;
     li{
-        max-width: 184px;
+        max-width: 120px;
     }
 }
  /* under test */
@@ -570,6 +580,7 @@ footer {
         .thumbnails{
             width: 98.0%;
                 #thumbnails{
+                    padding-top: 0.75em;
                   li {
                       width:31.333%;
                       float: left;
@@ -646,8 +657,20 @@ footer {
         padding: 5px 0;
     }
     #contacts_info {
-        font-size: .875em;
         margin: 1em 0 0 2em;
+         h1 {
+            font-size: 1.25em;
+        }
+        h2 {
+            font-size: 1em;
+        }
+        p {
+            font-size: .875em;
+        }
+        .symbol {
+            max-width: 24px;
+            max-height: 24px;
+        }
     }
     .categories h3 {
         font-size: 1em;
@@ -664,17 +687,20 @@ footer {
             
             .product_sheet 
             {   
-             .grid_4, .grid_5, .grid_7
+             .grid_4
                 {
                     width: 100%;
                     margin-left: 0;
                     margin-right: 0;
                 }
+                .description h3 {
+                    line-height: 1.1;
+                }
             }  
             .grid_2 {
-               width:48.0%;
+                width:48.0%;
             }
-            .grid_6 {
+            .grid_6, .grid_5, .grid_7 {
                 width: 100%;
                 margin-left: 0;
                 margin-right: 0;
@@ -689,11 +715,7 @@ footer {
                 width: 100%;
                 margin-left: 0;
                 margin-right: 0;
-                 }    
-            .social, .grid_1
-                {
-                 width:14.667%; 
-                }    
+                 }          
 }
 }
 @media only screen and (max-width:294px){

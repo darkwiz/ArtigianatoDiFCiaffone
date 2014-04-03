@@ -60,9 +60,10 @@ var DisplayProduct =
          swapImage: function() {
              var thmb = this.myBig;
              var src = this.myBig.prop("src");
+                 $(".selected").removeClass("selected").animate({opacity: 1});
              $('.product_img_container img').fadeOut(400,function(){
-                thmb.prop("src", $(this).prop("src").replace('big','small'));
-             $(this).fadeIn(400)[0].src = src.replace('small','big');
+                 thmb.addClass("selected").animate({opacity: .6});
+                 $(this).fadeIn(400)[0].src = src.replace('small','big');
             });
          }
 };
