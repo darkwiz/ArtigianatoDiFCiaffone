@@ -115,15 +115,15 @@ nav ul {
 
 nav li {
   display: inline-block;
-  width: 9%;
-  min-width: 150px; }
+  width: 12%;
+  min-width: 175px; }
 
 nav li.active a {
   color: #712422;
   font-weight: bold; }
 
 nav li a {
-  font-size: 1.25em;
+  font-size: 1.5em;
   display: block;
   padding: 10px 20px;
   text-decoration: none;
@@ -199,6 +199,9 @@ select:active {
   line-height: 1.1;
   letter-spacing: 1px;
   text-transform: uppercase;
+  -webkit-box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.2);
   background-color: #7e3938;
   background-color: rgba(113, 36, 34, 0.9); }
 
@@ -459,6 +462,7 @@ footer {
   float: left; }
 
 .inset-text {
+  font-family: Helvetica, Verdana, Arial;
   color: #7c8184;
   color: rgba(124, 129, 132, 0.8);
   text-shadow: 1px 4px 6px #d7e2e4, 0 0 0 black, 1px 4px 6px #d7e2e4; }

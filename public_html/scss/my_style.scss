@@ -132,8 +132,8 @@ nav ul {
 
 nav li {
     display:inline-block; 
-    width: 9%;
-    min-width: 150px;
+    width: 12%;
+    min-width: 175px;
 }
 
 nav li.active a {
@@ -142,7 +142,7 @@ nav li.active a {
 }
 
 nav li a {
-    font-size: 1.25em;
+    font-size: 1.5em;
     display: block;
     padding: 10px 20px;
     text-decoration: none;
@@ -234,7 +234,8 @@ select:active {
     line-height: 1.1;
     letter-spacing: 1px;
     text-transform: uppercase;
-     @include alpha-attribute('background-color', rgba($rosso_bordeaux, .9), $dirty_white);
+    @include box-shadow(0, 3px, 3px, 0px rgba(0, 0, 0, 0.2)); 
+    @include alpha-attribute('background-color', rgba($rosso_bordeaux, .9), $dirty_white);
     }
  
     
@@ -530,6 +531,7 @@ footer {
 }
 
 .inset-text {
+        font-family: Helvetica, Verdana, Arial;
         @include alpha-attribute('color', rgba($gray_1, .8), $gray_1);
         text-shadow: 1px 4px 6px $gray_light, 0 0 0 #000, 1px 4px 6px $gray_light;
         &::-moz-selection { background: $gray_light; color: $dirty_white; text-shadow: none; }
