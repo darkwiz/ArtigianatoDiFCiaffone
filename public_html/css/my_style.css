@@ -232,7 +232,7 @@ select:active {
   height: 1.5em; }
 .categories .thecategory .image {
   padding: .35em .35em;
-  max-width: 240px;
+  max-width: 280px;
   margin: auto; }
 .categories .thecategory .image img {
   border-radius: 100%;
@@ -630,4 +630,7 @@ height: 100px;*/
   #contacts_info p {
     margin: 0 0 5px 5px;
     padding: 0;
-    font-size: 0.875em; } }
+    font-size: 0.875em; }
+
+  footer a {
+    font-size: 0.75em; } }

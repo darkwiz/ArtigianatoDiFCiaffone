@@ -275,7 +275,7 @@ select:active {
     .thecategory {
         .image {
             padding: .35em .35em;
-            max-width: 240px;
+            max-width: 280px;
             margin: auto;
         }
         .image img {
@@ -747,5 +747,8 @@ footer {
             padding: 0;
             font-size: 0.875em;
           }
+    }
+    footer a {
+        font-size: 0.75em;
     }
 }  
