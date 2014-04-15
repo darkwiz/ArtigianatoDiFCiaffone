@@ -1,10 +1,3 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-
 var DisplayProduct =
 {       
         mySelect: undefined,
@@ -73,7 +66,6 @@ $(function() {
      $('#menu').slicknav({
 		prependTo:'#mobile_menu'
     });
-    
    $(DisplayProduct.myConfig.product).click( function(event){
        DisplayProduct.mySelect = $(this);
        DisplayProduct.getProduct(event)

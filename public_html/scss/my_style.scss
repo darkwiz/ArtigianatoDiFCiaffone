@@ -64,10 +64,7 @@ h1, h2, h3, h4, h5, h6 {
  #footer-content {
     width: 100%;
     overflow: hidden;
-/*    @include box-shadow( 0, 5px ,5px, -5px, rgba(0, 0, 0, 0.75));*/
     background: $dirty_white;
- /*  background: none repeat scroll 0 0 rgba(124, 129, 132, 0.6);  #7C8184 */
-/*   @include box-shadow( 0, 10px ,10px, -10px, rgba(0, 0, 0, 0.75));*/
 }
 
 
@@ -112,8 +109,7 @@ header {
     text-align: center;
     img {
         height: auto;
-/*      max-height: 92px;*/
-        max-height: 100px;
+        max-height: 4.1666em;
     }
 }
 
@@ -124,7 +120,7 @@ nav {
 
 nav ul {
     margin: 0;
-    padding: 5px 0;
+    padding: .3em 0;
     text-align:center;
     list-style: none;
     background-color: $dirty_white;
@@ -133,7 +129,7 @@ nav ul {
 nav li {
     display:inline-block; 
     width: 12%;
-    min-width: 175px;
+    min-width: 10.5em;
 }
 
 nav li.active a {
@@ -144,7 +140,7 @@ nav li.active a {
 nav li a {
     font-size: 1.5em;
     display: block;
-    padding: 10px 20px;
+    padding: .41666em .833em;
     text-decoration: none;
     color: $gray_1;
     transition: color 0.3s linear 0s;
@@ -164,7 +160,7 @@ nav li a {
     span {
         text-align:center;
         display: block;
-        padding: 1px;
+        padding: .08em;
     }
     img.social_icon {
       margin: 0;
@@ -192,12 +188,12 @@ select {
     color: $rosso_bordeaux;
     padding: 0.75em;
     width: 100%;
-    max-height:44px;
+    max-height:2.875em;
     -webkit-appearance: none;
     background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='59px' height='50px'><polyline points='46.139,15.518 25.166,36.49 4.193,15.519'/></svg>") right no-repeat;
     background-color: $dirty_white;
-    background-position: right 10px top 15px;
-    background-size: 15px 15px;
+    background-position: right 10px top 1em;
+    background-size: 1em 1em;
 }
 
 select:active {
@@ -242,7 +238,7 @@ select:active {
 .category_title {
     font-weight: 500;
     text-align: left;
-    padding-top: 12px;
+    padding-top: .75em;
     a { 
         line-height: 1.5;
         color: $gray_1;
@@ -264,11 +260,10 @@ select:active {
 
 .categories {
    
-    h3 {
+    h2 {
      width: 100%;
      color: $rosso_bordeaux;
      font-weight: 500;
-     font-size: 1.375em;
      text-transform: uppercase;
      height: 1.5em;
     }
@@ -282,7 +277,7 @@ select:active {
             border-radius: 100%;
             height: auto;
             width: 100%;
-            border: 3px solid $dirty_white;
+            border: .1875em solid $dirty_white;
             @include opacity(0.7);
             @include box-shadow(0, 3px, 2px, 0px rgba(0, 0, 0, 0.3));
             @include box-sizing(border-box);
@@ -426,7 +421,7 @@ select:active {
     .text-content {
         line-height: 1.5;
         font-weight: 500;
-        margin: 0 0 10px 10px;
+        margin: 0 0 .625em .625em;
     }
      .product_img_container{
         img {
@@ -448,15 +443,14 @@ select:active {
         text-decoration: underline;
     }
 }
- /* under test */
+
 #thumbnails {
     margin: 0;
     padding: 0;
     li{
-        max-width: 120px;
+        max-width: 7.5em;
     }
 }
- /* under test */
 
 
 /* ===========================
@@ -479,7 +473,9 @@ footer {
         text-align: left;
         padding-top: 1.25em;
         line-height: 1.3;
-        font-family: Helvetica, Verdana, Arial, sans-serif;
+        h5 {
+            font-family: Helvetica, Verdana, Arial, sans-serif;
+        }
         a{
              transition: color 0.3s linear 0s;
              color: $gray_1;
@@ -491,7 +487,7 @@ footer {
             margin: 0 0 1.5em 0;
         }
         .footer-title {
-            margin: 0 0 5px 0;
+            margin: 0 0 .3em 0;
         }
         li.active a {
             color: $rosso_bordeaux;
@@ -505,20 +501,22 @@ footer {
 #contacts_info {
     margin: 2em 0 0 3em;
     text-align: left;
-    font-size: 1.5em;
+    
     .info {
         padding-bottom: .75em;
     }
     p {
         margin: 0 0 .25em 2em;
-        font-size: 1.25em;
+        font-size: 1.875em;
         color: $rosso_2;
     }
     h2 {
+        font-size: 2em;
         margin: 0 0 .25em 1.75em;
         text-transform: uppercase;
     }
     h1 {
+        font-size: 2.25em;
         margin-bottom: .25em;
         text-transform: uppercase;
     }
@@ -538,7 +536,6 @@ footer {
 }
 
 .inset-text {
-        font-family: Helvetica, Verdana, Arial;
         @include alpha-attribute('color', rgba($gray_1, .8), $gray_1);
         text-shadow: 1px 4px 6px $gray_light, 0 0 0 #000, 1px 4px 6px $gray_light;
         &::-moz-selection { background: $gray_light; color: $dirty_white; text-shadow: none; }
@@ -597,15 +594,23 @@ footer {
                   }
         }
     }
-     /* under test */
-    .categories h3 {
+    .categories h2 {
         font-size: 1.25em;
         height: 1.75em;
     }
     #contacts_info {
-        font-size: 1em;
-}	
+        h1 {
+            font-size: 1.5em;
+        }
+        h2{
+            font-size: 1.375em;
+        }
+        p{
+           font-size: 1.25em;
+        }
+    }
 }
+
 
 /*  Display sotto i 768 px (Smartphone) */
 
@@ -621,8 +626,7 @@ footer {
            font-size: .875em;
         }
     }
-    #head-content{/*
-        height: 100px;*/
+    #head-content{
         position: relative;
         @include box-shadow(0,0,0,0);
     }
@@ -637,10 +641,6 @@ footer {
          display:block;
          width: 100%;
      }
-    .categories a h3 {
-        font-size: .875em;
-        height: 1.5em;
-    }
     .product_name {
             font-size: 0.875em;
             line-height: 1.1;
@@ -648,14 +648,12 @@ footer {
     .product_img_container {
         padding-top: .875em;
     }
-     /* under test */
     #thumbnails{
         li {
             width:48.0%;
             float: left;
         }
     }
-     /* under test */
     .category_title {
         a{
         font-size: 1.5em;}
@@ -663,7 +661,7 @@ footer {
     }
     .select_container {
         text-align: left;
-        padding: 5px 0;
+        padding: .3em 0;
     }
     #contacts_info {
         margin: 1em 0 0 2em;
@@ -677,11 +675,11 @@ footer {
             font-size: .875em;
         }
         .symbol {
-            max-width: 24px;
-            max-height: 24px;
+            max-width: 1.5em;
+            max-height: 1.5em;
         }
     }
-    .categories h3 {
+    .categories h2 {
         font-size: 1em;
         height: 1.5em;
     }
@@ -739,7 +737,7 @@ footer {
     h3.product_name {
             font-size: 0.75em;
     }
-    .categories h3 {
+    .categories h2 {
         font-size: 0.75em;
         height: 1.5em;
     }
@@ -750,8 +748,6 @@ footer {
     }
     #contacts_info {
         p {
-            margin: 0 0 5px 5px;
-            padding: 0;
             font-size: 0.875em;
           }
     }
