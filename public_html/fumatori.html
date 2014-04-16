@@ -18,6 +18,7 @@
         <link rel="stylesheet" href="css/fluid_grid.css" type="text/css">
         <link rel="stylesheet" href="css/slicknav.css" type="text/css">
         <link rel="stylesheet" href="css/custom_fonts.css" type="text/css">
+        <link href="css/jquery.selectbox.css" type="text/css" rel="stylesheet" />
         <link rel="stylesheet" href="css/my_style.css" type="text/css">
         <link rel="shortcut icon" href="img/favicon.ico" />
         
@@ -79,7 +80,7 @@
                       <h3>Scegli una categoria:</h3>
                       </div>
                       <div class="grid_6" id="select">
-                      <select onchange="location = this.options[this.selectedIndex].value;">
+                      <select onchange="location = this.options[this.selectedIndex].value;" id="s1">
                             <option value="prodotti.html">Tutte le categorie</option>
                             <option value="uomo.html">Accessori Uomo</option>
                             <option value="donna.html">Accessori Donna</option>
@@ -95,7 +96,7 @@
                      <div class="grid_4">
                         <div class="p_box show_product">
                            <a href="prodotto_esempio.html" class="product_link" data-source="partials/_tabacco.html">
-                               <img src="img/prodotti/portatabacco.png" alt="Prodotto x" />
+                               <img src="img/prodotti/portatabacco.png" alt="Astuccio per tabacco" />
                                <h3 class="product_name">Astuccio per tabacco</h3>
                            </a>
                             </div>
@@ -170,8 +171,14 @@
     </body>
     
 <script src="js/libs/jquery-1.11.0.min.js"></script>
-
+<script type="text/javascript" src="js/libs/jquery.selectbox-0.2.min.js"></script>
 <script src="js/libs/jquery.slicknav.min.js"></script>
 <script src="js/main.js" ></script>
+		<script type="text/javascript">
+		$(function () {
+			$("#s1").selectbox();
+		});
+		</script>
+
 
 </html>

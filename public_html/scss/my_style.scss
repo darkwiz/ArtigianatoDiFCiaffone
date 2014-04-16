@@ -182,33 +182,15 @@ nav li a {
    ===== Main Content    ===== 
    =========================== */
 
-select {
-    border: 1px solid $gray_1;
-    border-radius: 5px;
-    color: $rosso_bordeaux;
-    padding: 0.75em;
-    width: 100%;
-    max-height:2.875em;
-    -webkit-appearance: none;
-    background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='59px' height='50px'><polyline points='46.139,15.518 25.166,36.49 4.193,15.519'/></svg>") right no-repeat;
-    background-color: $dirty_white;
-    background-position: right 10px top 1em;
-    background-size: 1em 1em;
-}
-
-select:active {
-    border: 1px solid $gray_1;
-}
-
 .select_container {
-    h3 {
-       font-size: 1.25em;
-       font-weight: 500;
-       line-height: 2;
-    }
-    padding: 0.75em 0;
-    text-align: right;
-}
+  padding: 0.75em 0;
+  text-align: right; }
+  .select_container h3 {
+    font-size: 1.25em;
+    font-weight: 500;
+    vertical-align: middle;
+    line-height: 2; }
+
 .text_box {
      margin-top: .75em;
      margin-bottom: .75em;
@@ -216,6 +198,7 @@ select:active {
      max-width: 100%;
 
      p#history {
+        font-family: Helvetica, Verdana, Arial, sans-serif;
         padding: 1em 0;
         text-align: left;
         line-height: 1.5;
@@ -277,7 +260,7 @@ select:active {
             border-radius: 100%;
             height: auto;
             width: 100%;
-            border: .1875em solid $dirty_white;
+            border: 3px solid $dirty_white;
             @include opacity(0.7);
             @include box-shadow(0, 3px, 2px, 0px rgba(0, 0, 0, 0.3));
             @include box-sizing(border-box);

@@ -18,6 +18,7 @@
         <link rel="stylesheet" href="css/fluid_grid.css" type="text/css">
         <link rel="stylesheet" href="css/slicknav.css" type="text/css">
         <link rel="stylesheet" href="css/custom_fonts.css" type="text/css">
+        <link href="css/jquery.selectbox.css" type="text/css" rel="stylesheet" />
         <link rel="stylesheet" href="css/my_style.css" type="text/css">
         <link rel="shortcut icon" href="img/favicon.ico" />
         
@@ -80,8 +81,8 @@
                       <h3>Scegli una categoria:</h3>
                       </div>
                       <div class="grid_6" id="select">
-                      <select onchange="location = this.options[this.selectedIndex].value;">
-                            <option value="prodotti.html">Tutte le categorie</option>
+                    <select onchange="location = this.options[this.selectedIndex].value;" id="s1">
+                            <option value="prodotti.html" >Tutte le categorie</option>
                             <option value="uomo.html" selected="selected">Accessori Uomo</option>
                             <option value="donna.html">Accessori Donna</option>
                             <option value="fumatori.html">Accessori per fumatori</option>
@@ -172,8 +173,14 @@
     </body>
     
 <script src="js/libs/jquery-1.11.0.min.js"></script>
-
+<script type="text/javascript" src="js/libs/jquery.selectbox-0.2.min.js"></script>
 <script src="js/libs/jquery.slicknav.min.js"></script>
 <script src="js/main.js" ></script>
+		<script type="text/javascript">
+		$(function () {
+			$("#s1").selectbox();
+		});
+		</script>
+
 
 </html>
