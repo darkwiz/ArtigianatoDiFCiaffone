@@ -140,12 +140,10 @@ header {
 
 .the-logo {
     background: none repeat scroll 0 0 $dirty_white;
-    margin: 0 0 .25em;
-    padding: .125em;
     text-align: center;
     img {
         height: auto;
-        max-height: 4.1666em;
+        max-height: 5em;
     }
 }
 
@@ -156,7 +154,7 @@ nav {
 
 nav ul {
     margin: 0;
-    padding: .3em 0;
+    padding-top: .25em;
     text-align:center;
     list-style: none;
     background-color: $dirty_white;
@@ -273,23 +271,28 @@ nav li a {
         display: block;
         overflow: hidden;
         margin-bottom: .5em;
-        margin-top: .5em;
+        padding-top: 1em;
 } 
 
-
-.categories {
-   
+ 
+ .categories {
+   padding-top: .875em;
+   div.cont {
+        height: 1.5em;
+        position:relative;
     h2 {
      width: 100%;
      color: $rosso_bordeaux;
      font-weight: 500;
+     position:absolute;
+     bottom:0;
      text-transform: uppercase;
-     height: 1.5em;
     }
+   }
     .thecategory {
         .image {
-            padding: .35em .35em;
-            max-width: 17.5em;
+            padding: .25em .35em;
+            max-width: 16.5em;
             margin: auto;
         }
         .image img {
@@ -297,7 +300,7 @@ nav li a {
             height: auto;
             width: 100%;
             border: 3px solid $dirty_white;
-            @include opacity(0.7);
+            @include opacity(0.4);
             @include box-shadow(0, 3px, 2px, 0px rgba(0, 0, 0, 0.3));
             @include box-sizing(border-box);
             @include transition(opacity, .3s, ease-in-out);
@@ -395,6 +398,7 @@ nav li a {
         height: 2em;
         line-height: 1.8;
         @include border-bottom-radius(5px);
+        padding: .25em;
     }
     .p_box {
         margin-bottom: 1.25em;
@@ -569,6 +573,13 @@ footer {
 /* Display sotto i 1279 px (Tablet) */
 
 @media only screen and (max-width:1279px) {
+    .products {
+        .product_name {
+            font-size: 1.25em;
+            height: 2em;
+            line-height: 1.1;
+        }
+    }
     .title{
         font-size: 1.5em;
     }
@@ -614,7 +625,6 @@ footer {
     }
     .categories h2 {
         font-size: 1.25em;
-        height: 1.75em;
     }
     #contacts_info {
         h1 {
@@ -633,6 +643,13 @@ footer {
 /*  Display sotto i 768 px (Smartphone) */
 
 @media only screen and (max-width:767px){
+    .products {
+        .product_name {
+            font-size: 1em;
+            height: 2em;
+            line-height: 1.1;
+        }
+    }
     .title{
         font-size: 1.25em;
     }
@@ -678,8 +695,11 @@ footer {
         padding-top: 5px;
     }
     .select_container {
-        text-align: left;
-        padding: .3em 0;
+        padding-top: 0;
+        h3{
+         text-align: left;
+         padding: 0;
+        }
     }
     #contacts_info {
         margin: 1em 0 0 2em;
@@ -740,7 +760,7 @@ footer {
                 width: 100%;
                 margin-left: 0;
                 margin-right: 0;
-                 }          
+                 }     
 }
 }
 @media only screen and (max-width:294px){
@@ -752,8 +772,12 @@ footer {
        font-size: 0.75em;
     }
     }
-    h3.product_name {
+    .products {
+        .product_name {
             font-size: 0.75em;
+            height: 2.2em;
+            line-height: 1.2;
+        }
     }
     .categories h2 {
         font-size: 0.75em;
