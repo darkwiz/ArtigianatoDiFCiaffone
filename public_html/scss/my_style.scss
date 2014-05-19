@@ -142,7 +142,7 @@ header {
     background: none repeat scroll 0 0 $dirty_white;
     text-align: center;
     img {
-        max-height: 6.5em;
+        max-height: 7.5em;
         height: auto;
     }
     float: left;
@@ -162,27 +162,26 @@ nav {
 
 nav ul {
     margin: 0;
-    /*padding-top: .25em;*/
+    padding-top: .25em;
     text-align:center;
     list-style: none;
     background-color: $dirty_white;
-    padding: 6px 0 9px 0;  /*6px should equal top padding of "ul li a" below, 7px should equal bottom padding + bottom border of "ul li a" below*/
+    padding: 6px 0 0px 0;  /*6px should equal top padding of "ul li a" below, 9px should equal bottom padding + bottom border of "ul li a" below*/
 }
 
 nav li {
-    display:inline-block; 
+    display:inline-block;
 }
 
 nav li.active a {
     color: $rosso_bordeaux;
     font-weight: bold;
-    border-bottom-color: $rosso_bordeaux;
+    border-bottom: 6px solid $rosso_bordeaux;
 }
 
 nav li a {
-    border-bottom: 5px solid $gray_1;
-    padding: 6px 3px 4px 3px; /*top padding is 6px, bottom padding is 4px*/
-    margin-right: 20px; /*spacing between each menu link*/
+    padding: 6px 3px 11px 3px; /*top padding is 6px, bottom padding is 4px*/
+    margin-right: 1.25em; /*spacing between each menu link*/
     font-size: 1.5em;
     display: block;
     /*padding: .41666em .833em;*/
@@ -191,7 +190,7 @@ nav li a {
     transition: color 0.3s linear 0s;
     &:hover {
         color: $rosso_bordeaux;
-        font-weight: bold;
+        border-bottom: 6px solid $rosso_bordeaux ;
     }
       
 }
@@ -287,7 +286,6 @@ nav li a {
 
  
  .categories {
-  
    div.cont {
         height: 1.5em;
         position:relative;
@@ -304,7 +302,7 @@ nav li a {
     .thecategory {
          
         .image {
-            padding: .25em .35em;
+            padding: 0 .35em .25em .35em;
             max-width: 16.5em;
             margin: auto;
         }
@@ -659,6 +657,18 @@ footer {
 /*  Display sotto i 768 px (Smartphone) */
 
 @media only screen and (max-width:767px){
+.the-logo {
+    width: auto;
+    float:none;
+    background: none repeat scroll 0 0 $dirty_white;
+    margin: 0 0 .25em;
+    padding: .125em;
+    text-align: center;
+    img {
+        height: auto;
+        max-height: 4.1666em;
+    }
+}
     .products {
         .product_name {
             font-size: 1em;
