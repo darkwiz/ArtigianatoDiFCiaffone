@@ -124,7 +124,7 @@ header {
   text-align: center; }
   .the-logo img {
     height: auto;
-    max-height: 5em; }
+    max-height: 5.2083em; }
 
 nav {
   width: 100%;
@@ -254,8 +254,8 @@ nav li a {
   height: auto;
   width: 100%;
   border: 3px solid #f6ffff;
-  opacity: 0.4;
-  filter: alpha(opacity=40);
+  opacity: 0.6;
+  filter: alpha(opacity=60);
   -webkit-box-shadow: 0 3px 2px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 3px 2px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 0 3px 2px 0px rgba(0, 0, 0, 0.3);
@@ -585,7 +585,7 @@ footer {
     float: left; }
 
   .category_title {
-    padding-top: 5px; }
+    padding-top: .33em; }
     .category_title a {
       font-size: 1.5em; }
 

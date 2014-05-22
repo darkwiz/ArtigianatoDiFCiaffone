@@ -143,7 +143,7 @@ header {
     text-align: center;
     img {
         height: auto;
-        max-height: 5em;
+        max-height: 5.2083em;
     }
 }
 
@@ -302,7 +302,7 @@ nav li a {
             height: auto;
             width: 100%;
             border: 3px solid $dirty_white;
-            @include opacity(0.4);
+            @include opacity(0.6);
             @include box-shadow(0, 3px, 2px, 0px rgba(0, 0, 0, 0.3));
             @include box-sizing(border-box);
             @include transition(opacity, .3s, ease-in-out);
@@ -694,7 +694,7 @@ footer {
     .category_title {
         a{
         font-size: 1.5em;}
-        padding-top: 5px;
+        padding-top: .33em;
     }
     .select_container {
         padding-top: 0;
